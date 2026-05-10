@@ -1,0 +1,471 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Bandurria - inicio" [ref=e5] [cursor=pointer]:
+        - /url: "#nosotros"
+        - generic [ref=e6]: Bandurria
+        - generic [ref=e7]: Gráfica y Deco
+      - navigation "Navegación principal" [ref=e8]:
+        - link "Nosotros" [ref=e9] [cursor=pointer]:
+          - /url: "#nosotros"
+        - link "Tecnología" [ref=e10] [cursor=pointer]:
+          - /url: "#tecnologia"
+        - link "Servicios" [ref=e11] [cursor=pointer]:
+          - /url: "#servicios"
+        - link "Clientes" [ref=e12] [cursor=pointer]:
+          - /url: "#clientes"
+        - link "Contacto" [ref=e13] [cursor=pointer]:
+          - /url: "#contacto"
+      - generic [ref=e14]:
+        - button "Cambiar a modo claro" [ref=e15]:
+          - img [ref=e16]
+        - generic [ref=e19]:
+          - link "Facebook de Bandurria" [ref=e20] [cursor=pointer]:
+            - /url: https://www.facebook.com/bandurria.deco.7
+            - img [ref=e21]
+          - link "Instagram de Bandurria" [ref=e23] [cursor=pointer]:
+            - /url: https://www.instagram.com/bandurriadeco
+            - img [ref=e24]
+  - main [ref=e27]:
+    - region "Nosotros" [ref=e28]:
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: Quiénes somos
+        - heading "Un gusto en conocerte." [level=1] [ref=e34]:
+          - generic [ref=e35]: Un
+          - generic [ref=e36]: gusto
+          - generic [ref=e37]: en
+          - generic [ref=e38]: conocerte.
+        - generic [ref=e39]:
+          - paragraph [ref=e40]:
+            - text: Somos
+            - strong [ref=e41]: Nicolás y Germán
+            - text: ", hermanos y cofundadores de Bandurria. Hace más de 10 años nos propusimos renunciar a nuestros trabajos para crear algo que nos permitiera crecer profesionalmente, ser independientes, y sentirnos orgullosos de ello."
+          - paragraph [ref=e42]:
+            - text: Inicialmente, creímos que este orgullo tenía que ver con lograr tener una gran empresa, con muchos empleados y grandes clientes;
+            - emphasis [ref=e43]: rápidamente nos apartamos de esa idea.
+          - paragraph [ref=e44]:
+            - text: Hoy encontramos la satisfacción en
+            - strong [ref=e45]: hacer las cosas bien
+            - text: ", en ser lo más eficientes posibles y en tener relaciones sanas y duraderas con nuestros clientes y empleados. En eso trabajamos todos los días."
+        - generic [ref=e46]:
+          - link "Ver servicios" [ref=e47] [cursor=pointer]:
+            - /url: "#servicios"
+          - link "Contactanos" [ref=e48] [cursor=pointer]:
+            - /url: "#contacto"
+      - generic [ref=e49]:
+        - generic [ref=e50]: Scroll
+        - img [ref=e51]
+    - region "Estadísticas" [ref=e53]:
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - paragraph [ref=e57]:
+            - generic [ref=e58]: 0+
+          - paragraph [ref=e59]: años de experiencia
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: "0"
+          - paragraph [ref=e62]: categorías de servicio
+        - generic [ref=e63]:
+          - paragraph [ref=e64]:
+            - generic [ref=e65]: 0cm
+          - paragraph [ref=e66]: ancho máx. de impresión
+        - generic [ref=e67]:
+          - paragraph [ref=e68]:
+            - generic [ref=e69]: 0%
+          - paragraph [ref=e70]: producción nacional
+    - region "Tecnología" [ref=e71]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - paragraph [ref=e75]: Nuestra infraestructura
+          - heading "Tecnología" [level=2] [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - button "Calidad" [expanded] [ref=e79]:
+                - generic [ref=e80]: +
+                - generic [ref=e81]: Calidad
+                - img [ref=e82]
+              - paragraph [ref=e85]: "Trabajamos con maquinaria de última generación: cortadoras Zünd de precisión automatizada, impresoras de gran formato y sistemas UV de alta resolución. Cada trabajo pasa por control de calidad antes de ser entregado."
+            - button "Versatilidad" [ref=e87]:
+              - generic [ref=e88]: +
+              - generic [ref=e89]: Versatilidad
+              - img [ref=e90]
+            - button "Compromiso" [ref=e93]:
+              - generic [ref=e94]: +
+              - generic [ref=e95]: Compromiso
+              - img [ref=e96]
+          - paragraph [ref=e98]: "Si querés enterarte de qué es lo que hacemos visitá nuestra sección de Servicios. Desde aquí solo queremos transmitirte algo: si imprimís con nosotros tendrás de tu lado maquinaria de última generación y todo un equipo humano trabajando a diario con un único objetivo: entregarte un producto de excelencia."
+        - generic [ref=e99]:
+          - img "Cortadora Zünd de precisión" [ref=e101]
+          - img "Impresora de gran formato" [ref=e103]
+          - img "Impresión UV" [ref=e105]
+    - region "Servicios" [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - paragraph [ref=e109]: Lo que hacemos
+          - heading "Nuestros servicios" [level=2] [ref=e110]:
+            - generic [ref=e111]: Nuestros
+            - generic [ref=e112]: servicios
+          - paragraph [ref=e113]: Más de una década produciendo con calidad, eficiencia y relaciones duraderas.
+        - generic [ref=e114]:
+          - article [ref=e115]:
+            - img "Exhibidores" [ref=e117]
+            - generic [ref=e119]:
+              - heading "Exhibidores" [level=3] [ref=e120]
+              - paragraph [ref=e121]: Nos encargamos de la producción integral de tus exhibidores.
+              - list [ref=e122]:
+                - listitem [ref=e123]:
+                  - generic [ref=e124]: ›
+                  - generic [ref=e125]: Impresión en gran calidad sobre plástico corrugado
+                - listitem [ref=e126]:
+                  - generic [ref=e127]: ›
+                  - generic [ref=e128]: Espesores desde 2 a 10mm
+                - listitem [ref=e129]:
+                  - generic [ref=e130]: ›
+                  - generic [ref=e131]: Corte automatizado con precisión
+          - article [ref=e132]:
+            - img "Artículos deco y para el hogar" [ref=e134]
+            - generic [ref=e136]:
+              - heading "Artículos deco y para el hogar" [level=3] [ref=e137]
+              - paragraph [ref=e138]: Ideales para sumar a tu emprendimiento o negocio. Envianos tus diseños o utilizá los de nuestro catálogo.
+              - list [ref=e139]:
+                - listitem [ref=e140]:
+                  - generic [ref=e141]: ›
+                  - generic [ref=e142]: Cortinas de baño
+                - listitem [ref=e143]:
+                  - generic [ref=e144]: ›
+                  - generic [ref=e145]: Individuales de mesa
+                - listitem [ref=e146]:
+                  - generic [ref=e147]: ›
+                  - generic [ref=e148]: Posavasos
+                - listitem [ref=e149]:
+                  - generic [ref=e150]: ›
+                  - generic [ref=e151]: Manteles
+                - listitem [ref=e152]:
+                  - generic [ref=e153]: ›
+                  - generic [ref=e154]: Alfombras
+                - listitem [ref=e155]:
+                  - generic [ref=e156]: ›
+                  - generic [ref=e157]: Mousepads
+                - listitem [ref=e158]:
+                  - generic [ref=e159]: ›
+                  - generic [ref=e160]: Chapas vintage
+          - article [ref=e161]:
+            - img "Impresión en gran formato" [ref=e163]
+            - generic [ref=e165]:
+              - heading "Impresión en gran formato" [level=3] [ref=e166]
+              - paragraph [ref=e167]: "Imprimimos sobre los siguientes materiales:"
+              - list [ref=e168]:
+                - listitem [ref=e169]:
+                  - generic [ref=e170]: ›
+                  - generic [ref=e171]: Lona front 13oz brillo y mate
+                - listitem [ref=e172]:
+                  - generic [ref=e173]: ›
+                  - generic [ref=e174]: Lona front 7oz para vía pública
+                - listitem [ref=e175]:
+                  - generic [ref=e176]: ›
+                  - generic [ref=e177]: Lona backlight
+                - listitem [ref=e178]:
+                  - generic [ref=e179]: ›
+                  - generic [ref=e180]: Lona blackout
+                - listitem [ref=e181]:
+                  - generic [ref=e182]: ›
+                  - generic [ref=e183]: Lona mesh
+                - listitem [ref=e184]:
+                  - generic [ref=e185]: ›
+                  - generic [ref=e186]: Lienzo canvas de algodón
+                - listitem [ref=e187]:
+                  - generic [ref=e188]: ›
+                  - generic [ref=e189]: Cuerina o ecocuero
+                - listitem [ref=e190]:
+                  - generic [ref=e191]: ›
+                  - generic [ref=e192]: Papel citylight y fotográfico
+                - listitem [ref=e193]:
+                  - generic [ref=e194]: ›
+                  - generic [ref=e195]: Vinilo base blanca
+                - listitem [ref=e196]:
+                  - generic [ref=e197]: ›
+                  - generic [ref=e198]: Vinilo base gris
+                - listitem [ref=e199]:
+                  - generic [ref=e200]: ›
+                  - generic [ref=e201]: Vinilo cristal
+                - listitem [ref=e202]:
+                  - generic [ref=e203]: ›
+                  - generic [ref=e204]: Vinilo microperforado
+                - listitem [ref=e205]:
+                  - generic [ref=e206]: ›
+                  - generic [ref=e207]: Imán
+          - article [ref=e208]:
+            - img "Terminaciones para lonas" [ref=e210]
+            - generic [ref=e212]:
+              - heading "Terminaciones para lonas" [level=3] [ref=e213]
+              - list [ref=e214]:
+                - listitem [ref=e215]:
+                  - generic [ref=e216]: ›
+                  - generic [ref=e217]: Refilado recto o con forma
+                - listitem [ref=e218]:
+                  - generic [ref=e219]: ›
+                  - generic [ref=e220]: Armado de bolsillos para colgar o tensar
+                - listitem [ref=e221]:
+                  - generic [ref=e222]: ›
+                  - generic [ref=e223]: Soldado de lonas de gran tamaño
+                - listitem [ref=e224]:
+                  - generic [ref=e225]: ›
+                  - generic [ref=e226]: Refuerzo perimetral y ojalillado
+          - article [ref=e227]:
+            - img "Terminaciones en vinilo" [ref=e229]
+            - generic [ref=e231]:
+              - heading "Terminaciones en vinilo" [level=3] [ref=e232]
+              - list [ref=e233]:
+                - listitem [ref=e234]:
+                  - generic [ref=e235]: ›
+                  - generic [ref=e236]: Corte y medio corte, recto o en silueta
+                - listitem [ref=e237]:
+                  - generic [ref=e238]: ›
+                  - generic [ref=e239]: Laminado brillo y mate
+                - listitem [ref=e240]:
+                  - generic [ref=e241]: ›
+                  - generic [ref=e242]: Laminado blanco para fondeo de impresiones cristal
+          - article [ref=e243]:
+            - img "Rígidos / POP" [ref=e245]
+            - generic [ref=e247]:
+              - heading "Rígidos / POP" [level=3] [ref=e248]
+              - paragraph [ref=e249]: Impresión UV directa sobre el material mediante cama plana y corte automatizado.
+              - list [ref=e250]:
+                - listitem [ref=e251]:
+                  - generic [ref=e252]: ›
+                  - generic [ref=e253]: PVC, PAI, Foamboard
+                - listitem [ref=e254]:
+                  - generic [ref=e255]: ›
+                  - generic [ref=e256]: Plástico corrugado
+                - listitem [ref=e257]:
+                  - generic [ref=e258]: ›
+                  - generic [ref=e259]: PET y muchos otros materiales
+          - article [ref=e260]:
+            - img "Rígidos y semirígidos a pedido" [ref=e262]
+            - generic [ref=e264]:
+              - heading "Rígidos y semirígidos a pedido" [level=3] [ref=e265]
+              - paragraph [ref=e266]: Envianos el material, nosotros lo imprimimos. En color y también blanco.
+              - list [ref=e267]:
+                - listitem [ref=e268]:
+                  - generic [ref=e269]: ›
+                  - generic [ref=e270]: Chapa galvanizada y acero
+                - listitem [ref=e271]:
+                  - generic [ref=e272]: ›
+                  - generic [ref=e273]: Plásticos, vidrio, acrílico
+                - listitem [ref=e274]:
+                  - generic [ref=e275]: ›
+                  - generic [ref=e276]: Madera, goma eva, alfombra, corcho
+          - article [ref=e277]:
+            - img "Cartelería y vía pública" [ref=e279]
+            - generic [ref=e281]:
+              - heading "Cartelería y vía pública" [level=3] [ref=e282]
+              - list [ref=e283]:
+                - listitem [ref=e284]:
+                  - generic [ref=e285]: ›
+                  - generic [ref=e286]: Equipos de impresión hasta 320cm de ancho sin uniones
+                - listitem [ref=e287]:
+                  - generic [ref=e288]: ›
+                  - generic [ref=e289]: Tintas UV con excelente durabilidad en intemperie
+          - article [ref=e290]:
+            - img "Banner y porta banner" [ref=e292]
+            - generic [ref=e294]:
+              - heading "Banner y porta banner" [level=3] [ref=e295]
+              - paragraph [ref=e296]: Stock permanente y gran capacidad de producción.
+              - list [ref=e297]:
+                - listitem [ref=e298]:
+                  - generic [ref=e299]: ›
+                  - generic [ref=e300]: "Banner con porta banner: 90×190cm"
+                - listitem [ref=e301]:
+                  - generic [ref=e302]: ›
+                  - generic [ref=e303]: "Tipo Roll Up: 200×85cm"
+                - listitem [ref=e304]:
+                  - generic [ref=e305]: ›
+                  - generic [ref=e306]: Medidas especiales a pedido
+          - article [ref=e307]:
+            - img "Servicio de corte" [ref=e309]
+            - generic [ref=e311]:
+              - heading "Servicio de corte" [level=3] [ref=e312]
+              - list [ref=e313]:
+                - listitem [ref=e314]:
+                  - generic [ref=e315]: ›
+                  - generic [ref=e316]: Corte completo y medio corte
+                - listitem [ref=e317]:
+                  - generic [ref=e318]: ›
+                  - generic [ref=e319]: Corte a 45° y trazado
+                - listitem [ref=e320]:
+                  - generic [ref=e321]: ›
+                  - generic [ref=e322]: Amplia gama de sustratos
+          - article [ref=e323]:
+            - img "Back de prensa" [ref=e325]
+            - generic [ref=e327]:
+              - heading "Back de prensa" [level=3] [ref=e328]
+              - paragraph [ref=e329]: Stock permanente con fabricación en medidas especiales.
+              - list [ref=e330]:
+                - listitem [ref=e331]:
+                  - generic [ref=e332]: ›
+                  - generic [ref=e333]: 150×200cm
+                - listitem [ref=e334]:
+                  - generic [ref=e335]: ›
+                  - generic [ref=e336]: 200×200cm
+                - listitem [ref=e337]:
+                  - generic [ref=e338]: ›
+                  - generic [ref=e339]: 300×200cm
+                - listitem [ref=e340]:
+                  - generic [ref=e341]: ›
+                  - generic [ref=e342]: Medidas especiales a pedido
+    - region "Impresiones Offset y Digital" [ref=e343]:
+      - generic [ref=e344]:
+        - generic [ref=e345]:
+          - paragraph [ref=e346]: También hacemos
+          - heading "Impresiones Offset y Digital" [level=2] [ref=e347]:
+            - text: Impresiones Offset
+            - text: y Digital
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - paragraph [ref=e350]: Además de nuestra producción en gran formato, contamos con capacidad para realizar todo tipo de piezas gráficas en offset y digital, con la misma calidad y compromiso que nos caracteriza.
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - img [ref=e354]
+                - generic [ref=e356]: Flyers
+              - generic [ref=e357]:
+                - img [ref=e359]
+                - generic [ref=e361]: Folletos
+              - generic [ref=e362]:
+                - img [ref=e364]
+                - generic [ref=e366]: Posters
+              - generic [ref=e367]:
+                - img [ref=e369]
+                - generic [ref=e371]: Afiches para vía pública
+              - generic [ref=e372]:
+                - img [ref=e374]
+                - generic [ref=e376]: Dípticos / Trípticos / Cuadripticos
+              - generic [ref=e377]:
+                - img [ref=e379]
+                - generic [ref=e381]: Tarjetas
+              - generic [ref=e382]:
+                - img [ref=e384]
+                - generic [ref=e386]: Carpetas de presentación
+              - generic [ref=e387]:
+                - img [ref=e389]
+                - generic [ref=e391]: Encuadernaciones
+              - generic [ref=e392]:
+                - img [ref=e394]
+                - generic [ref=e396]: Catálogos
+              - generic [ref=e397]:
+                - img [ref=e399]
+                - generic [ref=e401]: Revistas
+              - generic [ref=e402]:
+                - img [ref=e404]
+                - generic [ref=e406]: Sobres
+          - generic [ref=e407]:
+            - generic [ref=e408]:
+              - img [ref=e410]
+              - generic [ref=e413]:
+                - heading "Offset" [level=3] [ref=e414]
+                - paragraph [ref=e415]: Alta fidelidad de color, ideal para tiradas medianas y largas con calidad premium.
+            - generic [ref=e416]:
+              - img [ref=e418]
+              - generic [ref=e420]:
+                - heading "Digital" [level=3] [ref=e421]
+                - paragraph [ref=e422]: Sin mínimo de tirada. Ideal para personalizaciones, pruebas y producciones cortas.
+            - generic [ref=e423]:
+              - img [ref=e425]
+              - generic [ref=e427]:
+                - heading "100% In House" [level=3] [ref=e428]
+                - paragraph [ref=e429]: Producción íntegra en planta. Mayor control, menores tiempos, mejor precio.
+            - link "Cotizar impresión" [ref=e431] [cursor=pointer]:
+              - /url: "#contacto"
+              - text: Cotizar impresión
+              - img [ref=e432]
+    - region "Confían en nosotros" [ref=e434]:
+      - generic [ref=e435]:
+        - generic [ref=e436]:
+          - paragraph [ref=e437]: Referencias
+          - heading "Confían en nosotros" [level=2] [ref=e438]
+          - paragraph [ref=e439]: Más de una década trabajando con agencias, estudios y marcas que necesitan calidad, respuesta rápida y un equipo de confianza.
+        - generic [ref=e440]:
+          - generic [ref=e441]: Agencias de publicidad
+          - generic [ref=e442]: Estudios de diseño
+          - generic [ref=e443]: Retail y comercios
+          - generic [ref=e444]: Eventos y cultura
+          - generic [ref=e445]: Gastronomía
+          - generic [ref=e446]: Arquitectura e interiorismo
+          - generic [ref=e447]: Moda e indumentaria
+          - generic [ref=e448]: Organizaciones sociales
+        - generic [ref=e449]:
+          - blockquote [ref=e450]:
+            - generic [ref=e451]: "\""
+            - paragraph [ref=e452]: Trabajamos con Bandurria hace años. Siempre cumplen en tiempo y calidad, con una atención muy personal.
+            - generic [ref=e453]: — Cliente — Agencia de publicidad
+          - blockquote [ref=e454]:
+            - generic [ref=e455]: "\""
+            - paragraph [ref=e456]: El nivel de detalle en el corte y la impresión UV es incomparable. Recomendamos Bandurria a todos nuestros clientes.
+            - generic [ref=e457]: — Cliente — Estudio de diseño
+          - blockquote [ref=e458]:
+            - generic [ref=e459]: "\""
+            - paragraph [ref=e460]: Encontramos en Bandurria un socio confiable para todos nuestros materiales de punto de venta.
+            - generic [ref=e461]: — Cliente — Retail / Moda
+        - generic [ref=e462]:
+          - paragraph [ref=e463]: ¿Tu empresa todavía no trabaja con nosotros?
+          - paragraph [ref=e464]: Escribinos y te respondemos en el día.
+          - link "Contactanos" [ref=e465] [cursor=pointer]:
+            - /url: "#contacto"
+            - text: Contactanos
+            - img [ref=e466]
+    - region "Contacto" [ref=e468]:
+      - generic [ref=e469]:
+        - generic [ref=e470]:
+          - paragraph [ref=e471]: Escribinos
+          - heading "Contacto" [level=2] [ref=e472]
+          - paragraph [ref=e473]: Respondemos rápido. Pedí tu presupuesto sin compromiso.
+        - generic [ref=e474]:
+          - generic [ref=e476]:
+            - list [ref=e477]:
+              - listitem [ref=e478]:
+                - img [ref=e480]
+                - generic [ref=e482]:
+                  - paragraph [ref=e483]: Teléfono
+                  - link "5227-8002" [ref=e484] [cursor=pointer]:
+                    - /url: tel:+541152278002
+              - listitem [ref=e485]:
+                - img [ref=e487]
+                - generic [ref=e490]:
+                  - paragraph [ref=e491]: Dirección
+                  - link "Montenegro 133, Chacarita, CABA" [ref=e492] [cursor=pointer]:
+                    - /url: https://maps.google.com/?q=Montenegro+133+Chacarita+CABA
+              - listitem [ref=e493]:
+                - img [ref=e495]
+                - generic [ref=e498]:
+                  - paragraph [ref=e499]: Horario
+                  - paragraph [ref=e500]: Lunes a Viernes · 9:15 a 17:45 hs.
+              - listitem [ref=e501]:
+                - img [ref=e503]
+                - generic [ref=e506]:
+                  - paragraph [ref=e507]: Email
+                  - link "contacto@bandurriadeco.com.ar" [ref=e508] [cursor=pointer]:
+                    - /url: mailto:contacto@bandurriadeco.com.ar
+            - iframe [ref=e510]
+            - link "¿Dónde estamos?" [ref=e511] [cursor=pointer]:
+              - /url: https://maps.google.com/?q=Montenegro+133+Chacarita+CABA+Argentina
+              - img [ref=e512]
+              - text: ¿Dónde estamos?
+          - generic [ref=e517]:
+            - generic [ref=e518]:
+              - generic [ref=e519]: Nombre *
+              - textbox "Nombre" [ref=e520]:
+                - /placeholder: Tu nombre
+            - generic [ref=e521]:
+              - generic [ref=e522]: Email *
+              - textbox "Email" [ref=e523]:
+                - /placeholder: tu@email.com
+            - generic [ref=e524]:
+              - generic [ref=e525]: Asunto *
+              - textbox "Asunto" [ref=e526]:
+                - /placeholder: ¿En qué te podemos ayudar?
+            - generic [ref=e527]:
+              - generic [ref=e528]: Mensaje *
+              - textbox "Mensaje" [ref=e529]:
+                - /placeholder: Contanos tu proyecto...
+            - button "Enviar mensaje" [ref=e530]
+  - link "Chatear por WhatsApp" [ref=e531] [cursor=pointer]:
+    - /url: https://wa.me/5491152278002
+    - img [ref=e532]
