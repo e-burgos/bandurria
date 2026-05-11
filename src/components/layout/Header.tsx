@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoImg from "../../assets/logo-full.png";
 
 interface Props {
   theme: "dark" | "light";
@@ -13,19 +14,23 @@ const NAV_LINKS = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-function Logo() {
+function Logo({ theme }: { theme: "dark" | "light" }) {
   return (
     <a
       href="#nosotros"
-      className="flex flex-col leading-none group"
+      className="flex items-center group"
       aria-label="Bandurria - inicio"
     >
-      <span className="text-xl font-black tracking-widest uppercase text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors duration-300">
-        Bandurria
-      </span>
-      <span className="text-[10px] font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)]">
-        Gráfica y Deco
-      </span>
+      <img
+        src={logoImg}
+        alt="Bandurria Gráfica y Deco"
+        width={220}
+        height={56}
+        className={[
+          "h-10 w-auto object-contain transition-[filter] duration-300",
+          theme === "light" ? "invert" : "",
+        ].join(" ")}
+      />
     </a>
   );
 }
@@ -124,7 +129,7 @@ export default function Header({ theme, onToggleTheme }: Props) {
       ].join(" ")}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo theme={theme} />
 
         {/* Nav desktop */}
         <nav

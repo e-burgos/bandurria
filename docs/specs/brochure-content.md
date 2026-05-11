@@ -21,10 +21,12 @@
 Equipos de impresión de hasta **320 cm de ancho**. Tinta UV de alta resistencia apta para interior y exterior.
 
 **Productos:**
+
 - Banners con portabanner y tipo Roll Up
 - Back de prensa
 
 **Sustratos disponibles:**
+
 - Lonas vinílicas (front, backlight, blackout, mesh)
 - Vinilos autoadhesivos (base blanca, base gris, cristal, microperforado)
 - Papeles de distintos gramajes
@@ -40,6 +42,7 @@ Equipos de impresión de hasta **320 cm de ancho**. Tinta UV de alta resistencia
 Impresión a través de **cama plana** sobre múltiples sustratos.
 
 **Sustratos rígidos:**
+
 - PVC
 - PAI
 - Foamboard
@@ -49,6 +52,7 @@ Impresión a través de **cama plana** sobre múltiples sustratos.
 - Cartón
 
 **Servicios de corte:**
+
 - Corte estándar
 - Medio corte
 - Corte a 45°
@@ -57,10 +61,12 @@ Impresión a través de **cama plana** sobre múltiples sustratos.
 **Tintas:** CMYK y Blanco
 
 **Producción especializada:**
+
 - Fabricación de exhibidores en plástico corrugado
 - Impresión sobre materiales especiales provistos por el cliente: chapa galvanizada, acero, plásticos, vidrio, acrílico, madera, goma eva, alfombra, corcho
 
 **Productos para punto de venta (PDV):**
+
 - Colgantes
 - Stoppers
 - Salientes
@@ -74,6 +80,7 @@ Impresión a través de **cama plana** sobre múltiples sustratos.
 ### 3. Impresiones Offset y Digital
 
 **Productos:**
+
 - Flyers
 - Folletos
 - Posters
@@ -92,25 +99,25 @@ Impresión a través de **cama plana** sobre múltiples sustratos.
 
 Equipamiento propio (100% in-house):
 
-| Equipo | Detalle |
-|--------|---------|
-| Plotters de gran formato | Entre 160 y 320 cm de ancho |
-| Tintas | Ecosolventes y UV, aptas interior/exterior, alta durabilidad |
-| Cama plana | Alta producción |
-| Equipo de corte | Suizo Zund de última generación |
-| Soldadoras | Para lonas de gran tamaño |
-| Ojalilladoras | Neumáticas |
-| Laminadora | Frío / Calor |
+| Equipo                   | Detalle                                                      |
+| ------------------------ | ------------------------------------------------------------ |
+| Plotters de gran formato | Entre 160 y 320 cm de ancho                                  |
+| Tintas                   | Ecosolventes y UV, aptas interior/exterior, alta durabilidad |
+| Cama plana               | Alta producción                                              |
+| Equipo de corte          | Suizo Zund de última generación                              |
+| Soldadoras               | Para lonas de gran tamaño                                    |
+| Ojalilladoras            | Neumáticas                                                   |
+| Laminadora               | Frío / Calor                                                 |
 
 ---
 
 ## Contacto
 
-| Canal | Dato |
-|-------|------|
-| Teléfono / WhatsApp | 11 2408 0830 |
-| Email | produccion@bandurriadeco.com.ar |
-| Ubicación | Chacarita, Capital Federal |
+| Canal               | Dato                            |
+| ------------------- | ------------------------------- |
+| Teléfono / WhatsApp | 11 2408 0830                    |
+| Email               | produccion@bandurriadeco.com.ar |
+| Ubicación           | Chacarita, Capital Federal      |
 
 ---
 
@@ -127,6 +134,7 @@ Equipamiento propio (100% in-house):
 7. **Contacto** — Teléfono, email, ubicación + botón WhatsApp
 
 ### Palabras clave para SEO
+
 - Impresión gran formato Buenos Aires
 - Cartelería Chacarita CABA
 - Impresión POP punto de venta
