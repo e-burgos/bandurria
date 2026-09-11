@@ -14,6 +14,16 @@
       "cycles_completed": 1,
       "description": "Rediseño de la landing con el material WEB BANDU 2026: logo, hero de carrusel, copy definitivo, 8 servicios y trabajos realizados.",
       "completed_at": "2026-09-10"
+    },
+    {
+      "module": "displayads-y-faq",
+      "spec": "spec-e-burgos-002-displayads-y-faq",
+      "apps": [
+        "apps/bandu"
+      ],
+      "cycles_completed": 1,
+      "completed_at": "2026-09-11",
+      "description": "DisplayAds como unidad de negocio de cartelería digital en la landing, sección de preguntas frecuentes, WhatsApp unificado y carrusel desktop en alta resolución."
     }
   ],
   "in_progress_modules": [],

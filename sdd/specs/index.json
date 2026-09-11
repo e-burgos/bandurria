@@ -16,6 +16,22 @@
       "created_at": "2026-09-10",
       "completed_at": "2026-09-10",
       "depends_on": []
+    },
+    {
+      "id": "spec-e-burgos-002-displayads-y-faq",
+      "author": "e-burgos",
+      "slug": "displayads-y-faq",
+      "folder": "sdd/specs/spec-e-burgos-002-displayads-y-faq",
+      "file": "sdd/specs/spec-e-burgos-002-displayads-y-faq/spec-e-burgos-002-displayads-y-faq.spec.md",
+      "module": "displayads-y-faq",
+      "app": "apps/bandu",
+      "status": "completed",
+      "title": "Cartelería Digital (DisplayAds), FAQ, WhatsApp y carrusel en alta",
+      "created_at": "2026-09-11",
+      "depends_on": [
+        "spec-e-burgos-001-web-2026-redesign"
+      ],
+      "completed_at": "2026-09-11"
     }
   ]
 }

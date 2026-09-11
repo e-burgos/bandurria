@@ -1,0 +1,124 @@
+{
+  "$schema": "../../../../schemas/cycle.schema.json",
+  "cycle": 1,
+  "module": "displayads-y-faq",
+  "spec": "spec-e-burgos-002-displayads-y-faq",
+  "apps": [
+    "apps/bandu"
+  ],
+  "phase": "landing-displayads-faq",
+  "flow": "lite",
+  "objectives": [
+    "Sumar DisplayAds como unidad de negocio con sección propia, anchor de menú y CTA a la plataforma",
+    "Publicar las 9 preguntas frecuentes como sección con acordeón accesible y JSON-LD FAQPage",
+    "Unificar el WhatsApp en +54 9 11 3309-1839 y regenerar el carrusel desktop desde los 150 DPI"
+  ],
+  "status": "completed",
+  "started_at": "2026-09-11",
+  "completed_at": "2026-09-11",
+  "documents": {
+    "plan": "sdd/specs/spec-e-burgos-002-displayads-y-faq/cycles/cycle-01/plan.md",
+    "tasks": "sdd/specs/spec-e-burgos-002-displayads-y-faq/cycles/cycle-01/tasks.json"
+  },
+  "artifacts": [],
+  "metrics": {
+    "tasks_total": 5,
+    "tasks_completed": 5,
+    "story_points": 15,
+    "files_created": [
+      "src/components/sections/CarteleriaDigital.tsx",
+      "src/components/sections/Faq.tsx",
+      "src/data/displayads.ts",
+      "src/data/faq.ts",
+      "src/data/contacto.ts",
+      "public/hero/exhibidores-desktop@2x.webp",
+      "public/hero/pop-rigidos-desktop@2x.webp",
+      "public/hero/banners-totems-desktop@2x.webp",
+      "public/hero/exhibidores-mobile@2x.webp",
+      "public/hero/pop-rigidos-mobile@2x.webp",
+      "public/hero/banners-totems-mobile@2x.webp"
+    ],
+    "files_modified": [
+      "src/App.tsx",
+      "src/components/layout/Header.tsx",
+      "src/components/layout/WhatsAppButton.tsx",
+      "src/components/sections/Contacto.tsx",
+      "src/components/sections/HeroCarousel.tsx",
+      "src/pages/BrochurePage.tsx",
+      "src/data/hero.ts",
+      "index.html",
+      "public/sitemap.xml",
+      "public/hero/exhibidores-desktop.webp",
+      "public/hero/pop-rigidos-desktop.webp",
+      "public/hero/banners-totems-desktop.webp",
+      "public/hero/exhibidores-mobile.webp",
+      "public/hero/pop-rigidos-mobile.webp",
+      "public/hero/banners-totems-mobile.webp"
+    ],
+    "files_deleted": [],
+    "usage": {
+      "tokens_in": 88000,
+      "tokens_out": 9500,
+      "approx": true,
+      "source": "declared-estimate",
+      "by_tier": {
+        "claude/opus": {
+          "tokens_in": 88000,
+          "tokens_out": 9500
+        }
+      },
+      "by_agent": [
+        {
+          "agent": "orchestrator",
+          "label": "solo",
+          "provider_model": "claude/opus",
+          "effort": "high",
+          "tokens_in": 33000,
+          "tokens_out": 3200,
+          "approx": true,
+          "source": "declared-estimate",
+          "recorded_at": "2026-09-11"
+        },
+        {
+          "agent": "implementor-front",
+          "label": "TASK-001..005",
+          "provider_model": "claude/opus",
+          "effort": "high",
+          "tokens_in": 55000,
+          "tokens_out": 6300,
+          "approx": true,
+          "source": "declared-estimate",
+          "recorded_at": "2026-09-11"
+        }
+      ]
+    }
+  },
+  "tables_created": [],
+  "endpoints_implemented": [],
+  "components_created": [
+    "COMP-005",
+    "COMP-006"
+  ],
+  "issues_found": [],
+  "reviewer_report": {
+    "approved": true,
+    "date": "2026-09-11",
+    "ca_results": {
+      "US-001": "OK — sección #carteleria-digital entre OffsetDigital y Clientes, anchor \"Cartelería Digital\" en nav desktop y mobile, CTA a https://displayads.com.ar con target=_blank verificado en navegador.",
+      "US-002": "OK — 9 preguntas en acordeón; aria-expanded/aria-controls correctos, apertura por Enter verificada, JSON-LD FAQPage con las 9 preguntas parseando.",
+      "US-003": "OK — grep de wa.me devuelve sólo src/data/contacto.ts; botón flotante resuelve a wa.me/5491133091839. Fijo 5227-8002 intacto y WhatsApp como ítem propio en Contacto.",
+      "US-004": "OK — desktop y mobile con srcSet 1x/2x desde los masters de 150 DPI (4000×1667 y 2250×1875); currentSrc en 1440px@2x resuelve a exhibidores-desktop@2x.webp."
+    },
+    "tests": {
+      "lint": "pnpm lint — sin findings",
+      "build": "pnpm build — tsc -b + vite build OK (CSS 57.6 kB, JS 460.2 kB / 141.0 kB gzip)",
+      "browser": "Playwright sobre pnpm preview: 1440px y 375px, tema claro y oscuro; anchors nuevos navegan y cierran el menú mobile, acordeón abre/cierra por teclado, window.scrollX = 0 a 375/768/1024px, sin errores de consola."
+    },
+    "notes": "El copy de Display-Ads lo entregó el dev por chat: displayads.com.ar está bloqueado por el proxy de egress del entorno remoto (WebFetch, curl y espejos fallan). El JSON-LD FAQPage de index.html es un espejo estático de src/data/faq.ts y hay que mantener los dos en sincronía.",
+    "follow_ups": [
+      "Que el cliente valide las 9 respuestas del FAQ: se redactaron desde el contenido ya publicado en la landing, no las dictó él.",
+      "Si Display-Ads entrega capturas o video de la plataforma, sumarlos a la columna izquierda de CarteleriaDigital.tsx.",
+      "Evaluar mover el JSON-LD FAQPage a un generador de build para que no se desincronice de src/data/faq.ts."
+    ]
+  }
+}

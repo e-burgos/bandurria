@@ -7,9 +7,11 @@ import Nosotros from "./components/sections/Nosotros";
 import Servicios from "./components/sections/Servicios";
 import Tecnologia from "./components/sections/Tecnologia";
 import OffsetDigital from "./components/sections/OffsetDigital";
+import CarteleriaDigital from "./components/sections/CarteleriaDigital";
 import Clientes from "./components/sections/Clientes";
 import Trabajos from "./components/sections/Trabajos";
 import Sectores from "./components/sections/Sectores";
+import Faq from "./components/sections/Faq";
 import Contacto from "./components/sections/Contacto";
 import BrochurePage from "./pages/BrochurePage";
 
@@ -24,9 +26,11 @@ function LandingPage() {
         <Servicios />
         <Tecnologia />
         <OffsetDigital />
+        <CarteleriaDigital />
         <Clientes />
         <Trabajos />
         <Sectores />
+        <Faq />
         <Contacto />
       </main>
       <WhatsAppButton />
