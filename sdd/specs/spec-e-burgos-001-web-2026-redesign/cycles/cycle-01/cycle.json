@@ -1,0 +1,129 @@
+{
+  "$schema": "../../../../schemas/cycle.schema.json",
+  "cycle": 1,
+  "module": "web-2026-redesign",
+  "spec": "spec-e-burgos-001-web-2026-redesign",
+  "apps": [
+    "apps/bandu"
+  ],
+  "phase": "landing-redesign",
+  "flow": "lite",
+  "objectives": [
+    "Reemplazar logo, hero de video y banner de métricas por el material WEB BANDU 2026",
+    "Aplicar el copy definitivo de Nosotros y los 8 servicios en el orden entregado",
+    "Sumar la sección Trabajos realizados y corregir el horario de atención"
+  ],
+  "status": "completed",
+  "started_at": "2026-09-10",
+  "completed_at": "2026-09-10",
+  "documents": {
+    "plan": "sdd/specs/spec-e-burgos-001-web-2026-redesign/cycles/cycle-01/plan.md",
+    "tasks": "sdd/specs/spec-e-burgos-001-web-2026-redesign/cycles/cycle-01/tasks.json"
+  },
+  "artifacts": [],
+  "metrics": {
+    "tasks_total": 8,
+    "tasks_completed": 8,
+    "story_points": 25,
+    "files_created": [
+      "src/components/sections/HeroCarousel.tsx",
+      "src/components/sections/Trabajos.tsx",
+      "src/components/sections/Sectores.tsx",
+      "src/components/ui/Marquee.tsx",
+      "src/data/hero.ts",
+      "src/data/clientes.ts",
+      "src/data/trabajos.ts",
+      "src/assets/logo-home.png",
+      "public/hero/",
+      "public/tecnologia.webp",
+      "public/logos/clientes/",
+      "public/trabajos/",
+      ".claude/launch.json"
+    ],
+    "files_modified": [
+      "src/App.tsx",
+      "src/index.css",
+      "src/components/layout/Header.tsx",
+      "src/components/sections/Nosotros.tsx",
+      "src/components/sections/Servicios.tsx",
+      "src/components/sections/ServiceCard.tsx",
+      "src/components/sections/Tecnologia.tsx",
+      "src/components/sections/OffsetDigital.tsx",
+      "src/components/sections/Clientes.tsx",
+      "src/components/sections/Contacto.tsx",
+      "src/data/services.ts"
+    ],
+    "files_deleted": [
+      "src/components/sections/Stats.tsx",
+      "src/assets/logo-full.png"
+    ],
+    "usage": {
+      "tokens_in": 268000,
+      "tokens_out": 25000,
+      "approx": true,
+      "source": "declared-estimate",
+      "by_tier": {
+        "claude/opus": {
+          "tokens_in": 268000,
+          "tokens_out": 25000
+        }
+      },
+      "by_agent": [
+        {
+          "agent": "orchestrator",
+          "label": "solo",
+          "provider_model": "claude/opus",
+          "effort": "high",
+          "tokens_in": 46000,
+          "tokens_out": 4500,
+          "approx": true,
+          "source": "declared-estimate",
+          "recorded_at": "2026-09-10"
+        },
+        {
+          "agent": "implementor-front",
+          "label": "TASK-001..008",
+          "provider_model": "claude/opus",
+          "effort": "high",
+          "tokens_in": 222000,
+          "tokens_out": 20500,
+          "approx": true,
+          "source": "declared-estimate",
+          "recorded_at": "2026-09-10"
+        }
+      ]
+    }
+  },
+  "tables_created": [],
+  "endpoints_implemented": [],
+  "components_created": [
+    "COMP-001",
+    "COMP-002",
+    "COMP-003",
+    "COMP-004"
+  ],
+  "issues_found": [],
+  "reviewer_report": {
+    "approved": true,
+    "date": "2026-09-10",
+    "ca_results": {
+      "US-001": "OK — logo nuevo en el header; hero con 3 slides, arte desktop ≥768px y mobile debajo (verificado con currentSrc); autoplay, flechas, dots y swipe funcionando. Sin video.",
+      "US-002": "OK — Nosotros con los 3 párrafos definitivos, sin foto, última oración en negrita.",
+      "US-003": "OK — los 8 servicios en el orden pedido; sólo se corrigieron tildes y mayúsculas del texto recibido.",
+      "US-004": "OK — Tecnología con la foto entregada (copy intacto); Clientes con los 18 logos blancos sobre banda oscura, legible en tema claro y oscuro.",
+      "US-005": "OK — Trabajos con marquee continuo pausable; imágenes placeholder hasta que el cliente entregue las suyas.",
+      "US-006": "OK — 'Lunes a Viernes · 9.15 a 13.30 y 14.30 a 17.45 hs.'"
+    },
+    "tests": {
+      "lint": "pnpm lint — sin findings",
+      "build": "pnpm build — tsc -b + vite build OK (CSS 55.3 kB, JS 440.7 kB / 135.7 kB gzip)",
+      "browser": "Verificado a 1440px, 768px y 375px en tema oscuro y claro: las 9 secciones, menú mobile, swipe del hero y ausencia de scroll horizontal (window.scrollX queda en 0)"
+    },
+    "notes": "El repo no tiene suite de tests automatizados; la verificación funcional fue en navegador. Se detectó y corrigió un desborde lateral de 16px a 768px causado por las entradas whileInView con x: ±40 (fix: html { overflow-x: clip } en index.css; 'hidden' rompería el sticky del header).",
+    "follow_ups": [
+      "Reemplazar Service.image en src/data/services.ts cuando lleguen las fotos de los 8 servicios (hoy la tarjeta usa ícono + degradado).",
+      "Reemplazar Trabajo.image en src/data/trabajos.ts cuando lleguen las fotos de trabajos (hoy reusa fotos del brochure como placeholder).",
+      "Confirmar con el cliente las correcciones de tildes sobre el texto de servicios que él marcó como definitivo."
+    ]
+  }
+}

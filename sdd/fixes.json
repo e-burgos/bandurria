@@ -1,0 +1,85 @@
+{
+  "$schema": "./schemas/fixes.schema.json",
+  "_description": "Global fixes index. Each fix maps to its owning spec via spec_id. Fixes not tied to a spec have spec_id: null and live in sdd/fixes.md. Spec-scoped fixes live in sdd/specs/{spec-id}/fixes.md. Maintained by: sdd-orchestrator.",
+  "_version": "3.0.0",
+  "_convention": "Fix ID format: FIX-[gh-user]-[spec-NNN]-[seq] for spec-scoped fixes. FIX-[gh-user]-[seq] for repo-level fixes.",
+  "_keywords": [
+    "[FIX]",
+    "[BUGFIX]",
+    "[HOTFIX]",
+    "[IMPROVEMENT]"
+  ],
+  "fixes": [
+    {
+      "id": "FIX-e-burgos-001",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-001.md",
+      "type": "IMPROVEMENT",
+      "severity": "medium",
+      "created_at": "2026-09-10",
+      "resolved_at": "2026-09-10",
+      "title": "Color de marca: reemplazar el verde por #f78233 en toda la web",
+      "estimation_hours": 0.75,
+      "description": "El accent del sitio pasa de verde (#25d366 / #128c47) a naranja de marca #f78233, con #c2410c como variante del tema claro por contraste. Incluye los verdes hardcodeados de Nosotros, ServiceCard, services.ts y BrochurePage.",
+      "justification": "Definicion de identidad visual del cliente: el color principal de la web debe ser #f78233.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "src/index.css",
+        "src/components/sections/Nosotros.tsx",
+        "src/components/sections/ServiceCard.tsx",
+        "src/data/services.ts",
+        "src/pages/BrochurePage.tsx"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "tokens_in": 52000,
+        "tokens_out": 5200,
+        "approx": true,
+        "source": "declared-estimate"
+      }
+    },
+    {
+      "id": "FIX-e-burgos-002",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-002.md",
+      "type": "IMPROVEMENT",
+      "severity": "medium",
+      "created_at": "2026-09-10",
+      "resolved_at": "2026-09-10",
+      "title": "Trabajos: marquee que cubre el viewport + visor de imagen con transicion",
+      "estimation_hours": 2.5,
+      "description": "Marquee repite el set las veces necesarias para cubrir el contenedor (antes dejaba aire en desktop) y pasa a velocidad en px/s; nuevo Lightbox con entrada desde la tarjeta tocada, navegacion por boton y teclado, foco atrapado y respeto de prefers-reduced-motion; imagenes full de 1600px para el visor; alt de los placeholders remapeados a la foto real.",
+      "justification": "Pedido del dev: el carrusel se cortaba en desktop y debia poder ampliarse cada imagen.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "src/components/ui/Marquee.tsx",
+        "src/components/ui/Lightbox.tsx",
+        "src/components/sections/Trabajos.tsx",
+        "src/components/sections/Clientes.tsx",
+        "src/data/trabajos.ts",
+        "public/trabajos/"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "tokens_in": 88000,
+        "tokens_out": 11000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
+    }
+  ]
+}

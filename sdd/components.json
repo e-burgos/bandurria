@@ -1,0 +1,100 @@
+{
+  "$schema": "./schemas/components.schema.json",
+  "_comment": "Frontend component registry. Grouped by app. Updated by sdd-architect (status: defined) and sdd-implementor-front (status: implemented | updated). Source of truth for all React components.",
+  "_schema": {
+    "_structure": "{ [app-key]: { components: ComponentEntry[] } }",
+    "_app_keys": "Use the app directory name as key. E.g. 'apps/example-app'. API apps don't have React components.",
+    "_update_protocol": {
+      "create": "Set created_in_cycle: N, updated_in_cycle: null, changelog: []. Status: defined (architect) → implemented (implementor-front).",
+      "update": "Set updated_in_cycle: N, append to changelog: { cycle: N, date: YYYY-MM-DD, change: 'what changed' }. Status → updated.",
+      "deprecate": "Set status: deprecated, append to changelog with change: 'deprecated — reason'. Do NOT delete."
+    },
+    "ComponentEntry": {
+      "id": "COMP-[NNN] — correlativo global por app",
+      "name": "Nombre del componente React (PascalCase)",
+      "type": "page | component | hook | layout",
+      "module": "módulo SDD al que pertenece",
+      "spec": "path a la spec que lo originó",
+      "path": "ruta relativa dentro del app (src/pages/...)",
+      "status": "defined | implemented | updated | deprecated",
+      "created_in_cycle": "número de ciclo donde se definió por primera vez",
+      "updated_in_cycle": "número del último ciclo que lo modificó (null si nunca se actualizó)",
+      "description": "qué hace el componente",
+      "consumes": [
+        "EP-001"
+      ],
+      "created_at": "YYYY-MM-DD",
+      "changelog": [
+        {
+          "cycle": 2,
+          "date": "YYYY-MM-DD",
+          "change": "descripción del cambio"
+        }
+      ]
+    }
+  },
+  "apps/bandu": {
+    "components": [
+      {
+        "id": "COMP-001",
+        "name": "HeroCarousel",
+        "type": "component",
+        "module": "web-2026-redesign",
+        "spec": "sdd/specs/spec-e-burgos-001-web-2026-redesign",
+        "path": "components/sections/HeroCarousel.tsx",
+        "status": "implemented",
+        "created_in_cycle": 1,
+        "updated_in_cycle": null,
+        "description": "Carrusel del hero: 3 imágenes con arte diferenciado desktop/mobile vía <picture>, autoplay pausable, flechas, dots y swipe. Reemplaza al video institucional.",
+        "consumes": [],
+        "created_at": "2026-09-10",
+        "changelog": []
+      },
+      {
+        "id": "COMP-002",
+        "name": "Marquee",
+        "type": "component",
+        "module": "web-2026-redesign",
+        "spec": "sdd/specs/spec-e-burgos-001-web-2026-redesign",
+        "path": "components/ui/Marquee.tsx",
+        "status": "implemented",
+        "created_in_cycle": 1,
+        "updated_in_cycle": null,
+        "description": "Cinta horizontal continua reutilizable: duplica sus hijos, se pausa en hover y se detiene con prefers-reduced-motion. La usan Clientes y Trabajos.",
+        "consumes": [],
+        "created_at": "2026-09-10",
+        "changelog": []
+      },
+      {
+        "id": "COMP-003",
+        "name": "Trabajos",
+        "type": "component",
+        "module": "web-2026-redesign",
+        "spec": "sdd/specs/spec-e-burgos-001-web-2026-redesign",
+        "path": "components/sections/Trabajos.tsx",
+        "status": "implemented",
+        "created_in_cycle": 1,
+        "updated_in_cycle": null,
+        "description": "Sección Trabajos realizados: dos filas de Marquee en sentidos opuestos con miniaturas de public/trabajos. Datos en src/data/trabajos.ts.",
+        "consumes": [],
+        "created_at": "2026-09-10",
+        "changelog": []
+      },
+      {
+        "id": "COMP-004",
+        "name": "Sectores",
+        "type": "component",
+        "module": "web-2026-redesign",
+        "spec": "sdd/specs/spec-e-burgos-001-web-2026-redesign",
+        "path": "components/sections/Sectores.tsx",
+        "status": "implemented",
+        "created_in_cycle": 1,
+        "updated_in_cycle": null,
+        "description": "Sectores que atendemos + banner CTA '¿Tu empresa todavía no trabaja con nosotros?'. Extraído de Clientes para poder intercalar Trabajos.",
+        "consumes": [],
+        "created_at": "2026-09-10",
+        "changelog": []
+      }
+    ]
+  }
+}

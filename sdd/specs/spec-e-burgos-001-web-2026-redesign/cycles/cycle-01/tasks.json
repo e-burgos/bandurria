@@ -1,0 +1,237 @@
+{
+  "$schema": "../../../../schemas/cycle-tasks.schema.json",
+  "spec": "spec-e-burgos-001-web-2026-redesign",
+  "cycle": 1,
+  "module": "web-2026-redesign",
+  "apps": [
+    "apps/bandu"
+  ],
+  "flow": "lite",
+  "user_stories_generated": true,
+  "prerequisites": {
+    "tasks_generated": true
+  },
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Optimizar e incorporar los assets 2026 (logo, carruseles, foto tecnología, logos de clientes)",
+      "user_stories": [
+        "US-001",
+        "US-004"
+      ],
+      "estimation_hours": 1.5,
+      "story_points": 3,
+      "depends_on": [],
+      "status": "done",
+      "files": [
+        "src/assets/logo-home.png",
+        "public/hero/",
+        "public/tecnologia.jpg",
+        "public/logos/clientes/"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 26000,
+        "tokens_out": 2600,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-002",
+      "title": "Hero de carrusel PC/mobile en reemplazo del video; eliminar Stats y reordenar la navegación",
+      "user_stories": [
+        "US-001"
+      ],
+      "estimation_hours": 3,
+      "story_points": 5,
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/HeroCarousel.tsx",
+        "src/components/sections/Stats.tsx",
+        "src/components/layout/Header.tsx",
+        "src/App.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 34000,
+        "tokens_out": 4200,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-003",
+      "title": "Sección Nosotros con el copy definitivo, sin video ni foto",
+      "user_stories": [
+        "US-002"
+      ],
+      "estimation_hours": 1,
+      "story_points": 2,
+      "depends_on": [
+        "TASK-002"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/Nosotros.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 22000,
+        "tokens_out": 1900,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-004",
+      "title": "Catálogo de 8 servicios definitivos con imagen opcional",
+      "user_stories": [
+        "US-003"
+      ],
+      "estimation_hours": 2.5,
+      "story_points": 5,
+      "depends_on": [
+        "TASK-002"
+      ],
+      "status": "done",
+      "files": [
+        "src/data/services.ts",
+        "src/components/sections/ServiceCard.tsx",
+        "src/components/sections/Servicios.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 30000,
+        "tokens_out": 3400,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-005",
+      "title": "Tecnología con la foto nueva y Offset sin el CTA Cotizar",
+      "user_stories": [
+        "US-004"
+      ],
+      "estimation_hours": 1,
+      "story_points": 2,
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/Tecnologia.tsx",
+        "src/components/sections/OffsetDigital.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 24000,
+        "tokens_out": 1800,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-006",
+      "title": "Clientes con los logos blancos y extracción de Sectores + banner CTA",
+      "user_stories": [
+        "US-004"
+      ],
+      "estimation_hours": 1.5,
+      "story_points": 3,
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/Clientes.tsx",
+        "src/components/sections/Sectores.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 26000,
+        "tokens_out": 2400,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-007",
+      "title": "Sección Trabajos realizados con marquee continuo",
+      "user_stories": [
+        "US-005"
+      ],
+      "estimation_hours": 1.5,
+      "story_points": 3,
+      "depends_on": [
+        "TASK-006"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/Trabajos.tsx",
+        "src/data/trabajos.ts"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 22000,
+        "tokens_out": 2000,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    },
+    {
+      "id": "TASK-008",
+      "title": "Horario de contacto y verificación final (lint, build, desktop/mobile)",
+      "user_stories": [
+        "US-006"
+      ],
+      "estimation_hours": 1,
+      "story_points": 2,
+      "depends_on": [
+        "TASK-003",
+        "TASK-004",
+        "TASK-005",
+        "TASK-007"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/sections/Contacto.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 38000,
+        "tokens_out": 2200,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-10"
+      }
+    }
+  ]
+}
