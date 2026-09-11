@@ -7,7 +7,7 @@
   --color-text: #f5f5f4;
   --color-text-muted: #a3a3a3;
   --color-border: rgba(255, 255, 255, 0.07);
-  --color-accent: #25d366;
+  --color-accent: #f78233;
 
   --animate-fade-in-up: fade-in-up 0.55s ease-out both;
   --animate-fade-in: fade-in 0.6s ease-out both;
@@ -108,7 +108,7 @@
   --color-text: #0a0a0a;
   --color-text-muted: #525252;
   --color-border: rgba(0, 0, 0, 0.08);
-  --color-accent: #128c47;
+  --color-accent: #c2410c;
 }
 
 *,
@@ -119,6 +119,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
   background-color: var(--color-bg);
   color: var(--color-text);
   transition:

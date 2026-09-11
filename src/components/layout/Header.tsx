@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoImg from "../../assets/logo-full.png";
+import logoImg from "../../assets/logo-home.png";
 
 interface Props {
   theme: "dark" | "light";
@@ -8,26 +8,27 @@ interface Props {
 
 const NAV_LINKS = [
   { label: "Nosotros", href: "#nosotros" },
-  { label: "Tecnología", href: "#tecnologia" },
   { label: "Servicios", href: "#servicios" },
+  { label: "Tecnología", href: "#tecnologia" },
   { label: "Clientes", href: "#clientes" },
+  { label: "Trabajos", href: "#trabajos" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 function Logo({ theme }: { theme: "dark" | "light" }) {
   return (
     <a
-      href="#nosotros"
+      href="#inicio"
       className="flex items-center group"
       aria-label="Bandurria - inicio"
     >
       <img
         src={logoImg}
         alt="Bandurria Gráfica y Deco"
-        width={220}
-        height={56}
+        width={376}
+        height={95}
         className={[
-          "h-10 w-auto object-contain transition-[filter] duration-300",
+          "h-9 w-auto object-contain transition-[filter] duration-300 sm:h-10",
           theme === "light" ? "invert" : "",
         ].join(" ")}
       />
@@ -133,7 +134,7 @@ export default function Header({ theme, onToggleTheme }: Props) {
 
         {/* Nav desktop */}
         <nav
-          className="hidden md:flex items-center gap-8"
+          className="hidden lg:flex items-center gap-7"
           aria-label="Navegación principal"
         >
           {NAV_LINKS.map((link) => (
@@ -188,7 +189,7 @@ export default function Header({ theme, onToggleTheme }: Props) {
 
           {/* Hamburger — mobile */}
           <button
-            className="md:hidden flex flex-col justify-center gap-[5px] p-2 w-10 h-10"
+            className="lg:hidden flex flex-col justify-center gap-[5px] p-2 w-10 h-10"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={menuOpen}
@@ -214,7 +215,7 @@ export default function Header({ theme, onToggleTheme }: Props) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)] animate-[slide-in-right_0.28s_ease-out]">
+        <div className="lg:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)] animate-[slide-in-right_0.28s_ease-out]">
           <nav
             className="flex flex-col px-4 py-4 gap-1"
             aria-label="Menú móvil"

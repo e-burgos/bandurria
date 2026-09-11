@@ -106,7 +106,7 @@ const CONTACT_INFO = [
   {
     icon: ClockIcon,
     label: "Horario",
-    value: "Lunes a Viernes · 9:15 a 17:45 hs.",
+    value: "Lunes a Viernes · 9.15 a 13.30 y 14.30 a 17.45 hs.",
   },
   {
     icon: MailIcon,

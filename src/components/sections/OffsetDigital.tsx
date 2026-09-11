@@ -147,24 +147,6 @@ export default function OffsetDigital() {
               </motion.div>
             ))}
 
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              className="pt-2"
-            >
-              <a
-                href="#contacto"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-7 py-3 text-sm font-semibold text-white shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300"
-              >
-                Cotizar impresión
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </a>
-            </motion.div>
           </motion.div>
 
         </div>

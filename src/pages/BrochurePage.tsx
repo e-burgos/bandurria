@@ -34,7 +34,7 @@ const SERVICES = [
     description:
       "Equipos de impresión de última generación con tinta UV de alta resistencia, apta para interior y exterior. Colores vivos, durabilidad real.",
     highlight: "hasta 320 cm de ancho",
-    color: "#25d366",
+    color: "#f78233",
     icon: Expand,
     images: ["/img-008.jpg", "/img-006.jpg", "/img-005.jpg"],
     products: [

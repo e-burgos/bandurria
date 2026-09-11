@@ -30,31 +30,6 @@ const ITEMS: AccordionItem[] = [
   },
 ];
 
-const GALLERY = [
-  {
-    src: "https://bandurriadeco.com.ar/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-19-at-16.02.57.jpeg",
-    alt: "Cortadora Zünd de precisión",
-    span: "row-span-2",
-  },
-  {
-    src: "https://bandurriadeco.com.ar/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-19-at-16.02.57-1.jpeg",
-    alt: "Impresora de gran formato",
-    span: "",
-  },
-  {
-    src: "https://bandurriadeco.com.ar/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-19-at-16.02.56.jpeg",
-    alt: "Impresión UV",
-    span: "",
-  },
-];
-
-// Fallback con imágenes de Unsplash si las originales fallan
-const GALLERY_FALLBACK = [
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80",
-  "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80",
-  "https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&fit=crop&w=700&q=80",
-];
-
 function AccordionRow({
   item,
   isOpen,
@@ -120,36 +95,6 @@ function AccordionRow({
   );
 }
 
-function GalleryImage({
-  src,
-  alt,
-  fallback,
-  span,
-}: {
-  src: string;
-  alt: string;
-  fallback: string;
-  span: string;
-}) {
-  const [imgSrc, setImgSrc] = useState(src);
-  return (
-    <motion.div
-      className={`overflow-hidden rounded-xl ${span}`}
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-    >
-      <img
-        src={imgSrc}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-        onError={() => setImgSrc(fallback)}
-        className="h-full w-full object-cover"
-      />
-    </motion.div>
-  );
-}
-
 export default function Tecnologia() {
   const [openId, setOpenId] = useState<string | null>("calidad");
 
@@ -204,24 +149,25 @@ export default function Tecnologia() {
             </motion.p>
           </motion.div>
 
-          {/* Columna derecha — galería */}
+          {/* Columna derecha — foto de planta */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.65, ease: EASE }}
-            className="grid grid-cols-2 grid-rows-2 gap-3 h-[420px] lg:h-[480px]"
+            className="overflow-hidden rounded-2xl border border-[var(--color-border)]"
           >
-            {GALLERY.map((img, i) => (
-              <GalleryImage
-                key={img.alt}
-                src={img.src}
-                alt={img.alt}
-                fallback={GALLERY_FALLBACK[i]}
-                span={img.span}
-              />
-            ))}
+            <img
+              src="/tecnologia.webp"
+              alt="Cortadora Zünd, impresora de gran formato y cama plana UV en la planta de Bandurria"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
           </motion.div>
+
         </div>
       </div>
     </section>

@@ -53,13 +53,13 @@ export default function Servicios() {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="mt-4 mx-auto max-w-xl text-base text-[var(--color-text-muted)]"
           >
-            Más de una década produciendo con calidad, eficiencia y relaciones
-            duraderas.
+            Producción integral: imprimimos, cortamos, terminamos e instalamos
+            en un mismo lugar.
           </motion.p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {SERVICES.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
