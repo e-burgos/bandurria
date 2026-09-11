@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { CLIENTES } from "../../data/clientes";
 import { Marquee } from "../ui/Marquee";
+import { asset } from "../../lib/asset";
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 const BAND = "#0d0d0d";
@@ -10,7 +11,7 @@ function LogoTile({ name, logo }: { name: string; logo: string }) {
   return (
     <div className="flex h-24 w-44 shrink-0 items-center justify-center px-5 sm:h-28 sm:w-56 sm:px-8">
       <img
-        src={logo}
+        src={asset(logo)}
         alt={name}
         loading="lazy"
         decoding="async"

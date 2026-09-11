@@ -20,6 +20,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { asset } from "../lib/asset";
 
 /* ─── Constants ─────────────────────────────────────────── */
 
@@ -243,7 +244,7 @@ function Hero() {
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[var(--color-bg)] px-4 text-center">
       {/* Background photo */}
       <img
-        src="/img-000.jpg"
+        src={asset("/img-000.jpg")}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
@@ -361,7 +362,7 @@ function ServiceImageSlider({
     <AnimatePresence mode="popLayout">
       <motion.img
         key={images[index] + index}
-        src={images[index]}
+        src={asset(images[index])}
         alt={title}
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -704,7 +705,7 @@ function Equipment() {
         <FadeUp className="mb-12">
           <div className="relative overflow-hidden rounded-2xl">
             <img
-              src="/img-011.jpg"
+              src={asset("/img-011.jpg")}
               alt="Parque de máquinas: impresoras CZ de gran formato y cortadora Zünd"
               className="h-64 sm:h-80 w-full object-cover"
               loading="lazy"
@@ -742,7 +743,7 @@ function Equipment() {
                 {/* Imagen */}
                 <div className="relative aspect-video overflow-hidden">
                   <img
-                    src={eq.image}
+                    src={asset(eq.image)}
                     alt={eq.title}
                     loading="lazy"
                     decoding="async"
@@ -1087,7 +1088,7 @@ export default function BrochurePage() {
         {/* Foto de la planta — divisor visual */}
         <div className="relative h-44 sm:h-60 overflow-hidden">
           <img
-            src="/img-004.jpg"
+            src={asset("/img-004.jpg")}
             alt=""
             aria-hidden="true"
             className="h-full w-full object-cover"

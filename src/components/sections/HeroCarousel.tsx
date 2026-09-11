@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { HERO_SLIDES } from "../../data/hero";
+import { asset } from "../../lib/asset";
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 const AUTOPLAY_MS = 5500;
@@ -102,12 +103,12 @@ export default function HeroCarousel() {
             <picture>
               <source
                 media="(min-width: 768px)"
-                srcSet={slide.desktop}
+                srcSet={asset(slide.desktop)}
                 width={1920}
                 height={800}
               />
               <img
-                src={slide.mobile}
+                src={asset(slide.mobile)}
                 alt={slide.alt}
                 width={1080}
                 height={900}

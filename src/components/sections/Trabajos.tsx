@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { TRABAJOS } from "../../data/trabajos";
 import { Marquee } from "../ui/Marquee";
 import { Lightbox, type OriginOffset } from "../ui/Lightbox";
+import { asset } from "../../lib/asset";
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 const ROWS = [
@@ -30,7 +31,7 @@ function WorkTile({ id, alt, image, onOpen }: TileProps) {
       className="group/tile relative aspect-[4/3] w-48 shrink-0 cursor-zoom-in overflow-hidden rounded-xl border border-[var(--color-border)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] sm:w-60"
     >
       <img
-        src={image}
+        src={asset(image)}
         alt={alt}
         width={640}
         height={480}

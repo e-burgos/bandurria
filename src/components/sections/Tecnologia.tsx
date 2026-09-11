@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { asset } from "../../lib/asset";
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
 
@@ -158,7 +159,7 @@ export default function Tecnologia() {
             className="overflow-hidden rounded-2xl border border-[var(--color-border)]"
           >
             <img
-              src="/tecnologia.webp"
+              src={asset("/tecnologia.webp")}
               alt="Cortadora Zünd, impresora de gran formato y cama plana UV en la planta de Bandurria"
               width={1200}
               height={1200}

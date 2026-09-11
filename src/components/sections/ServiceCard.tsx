@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Service } from "../../data/services";
+import { asset } from "../../lib/asset";
 
 interface Props {
   service: Service;
@@ -13,7 +14,7 @@ function CardMedia({ service }: { service: Service }) {
     return (
       <div className="relative aspect-[16/10] overflow-hidden">
         <img
-          src={service.image}
+          src={asset(service.image)}
           alt={service.title}
           loading="lazy"
           decoding="async"

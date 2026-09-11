@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { asset } from "../../lib/asset";
 
 const ENTER: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -167,7 +168,7 @@ export function Lightbox({
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.img
                   key={active.item.id}
-                  src={active.item.full}
+                  src={asset(active.item.full)}
                   alt={active.item.alt}
                   initial={{ opacity: 0, x: direction * stepShift }}
                   animate={{ opacity: 1, x: 0 }}
