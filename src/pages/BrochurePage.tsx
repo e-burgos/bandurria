@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { WHATSAPP_DISPLAY, whatsappLink } from "../data/contacto";
 import {
   ArrowUpRight,
   ChevronRight,
@@ -304,7 +305,7 @@ function Hero() {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="https://wa.me/5491124080830?text=Hola%20Bandurria%2C%20consulto%20por%20sus%20servicios"
+            href={whatsappLink("Hola Bandurria, consulto por sus servicios")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[var(--color-accent)]/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
@@ -527,7 +528,7 @@ function Services() {
                     className="mt-10"
                   >
                     <a
-                      href={`https://wa.me/5491124080830?text=Hola%20Bandurria%2C%20consulto%20por%20${encodeURIComponent(service.title)}`}
+                      href={whatsappLink(`Hola Bandurria, consulto por ${service.title}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_8px_20px_rgba(0,0,0,0.4)] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
@@ -900,8 +901,8 @@ const CONTACT_ITEMS = [
   {
     Icon: Phone,
     label: "Teléfono / WhatsApp",
-    value: "11 2408 0830",
-    href: "https://wa.me/5491124080830",
+    value: WHATSAPP_DISPLAY,
+    href: whatsappLink(),
   },
   {
     Icon: Mail,
@@ -995,7 +996,7 @@ function Contact() {
                 con agencias, estudios y marcas de todos los tamaños.
               </p>
               <a
-                href="https://wa.me/5491124080830?text=Hola%20Bandurria%2C%20necesito%20una%20cotizaci%C3%B3n"
+                href={whatsappLink("Hola Bandurria, necesito una cotización")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-xl hover:shadow-[var(--color-accent)]/20 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
@@ -1061,7 +1062,7 @@ function BrochureNav() {
       </nav>
 
       <a
-        href="https://wa.me/5491124080830"
+        href={whatsappLink()}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold text-white transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"

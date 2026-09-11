@@ -16,6 +16,20 @@
           "tasks_done": 8
         }
       }
+    },
+    "spec-e-burgos-002-displayads-y-faq": {
+      "cycles": {
+        "cycle-01": {
+          "file": "sdd/specs/spec-e-burgos-002-displayads-y-faq/cycles/cycle-01/tasks.json",
+          "module": "displayads-y-faq",
+          "apps": [
+            "apps/bandu"
+          ],
+          "status": "completed",
+          "tasks_total": 5,
+          "tasks_done": 5
+        }
+      }
     }
   }
 }

@@ -1,0 +1,151 @@
+{
+  "$schema": "../../../../schemas/cycle-tasks.schema.json",
+  "spec": "spec-e-burgos-002-displayads-y-faq",
+  "cycle": 1,
+  "module": "displayads-y-faq",
+  "apps": [
+    "apps/bandu"
+  ],
+  "flow": "lite",
+  "user_stories_generated": true,
+  "prerequisites": {
+    "tasks_generated": true
+  },
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Regenerar el arte del carrusel desktop desde los archivos de 150 DPI",
+      "user_stories": [
+        "US-004"
+      ],
+      "estimation_hours": 0.5,
+      "story_points": 2,
+      "depends_on": [],
+      "status": "done",
+      "files": [
+        "public/hero/",
+        "src/data/hero.ts",
+        "src/components/sections/HeroCarousel.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 9000,
+        "tokens_out": 900,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-11"
+      }
+    },
+    {
+      "id": "TASK-002",
+      "title": "Unificar el número de WhatsApp en +54 9 11 3309-1839 y sumarlo a la lista de contacto",
+      "user_stories": [
+        "US-003"
+      ],
+      "estimation_hours": 0.5,
+      "story_points": 2,
+      "depends_on": [],
+      "status": "done",
+      "files": [
+        "src/data/contacto.ts",
+        "src/components/layout/WhatsAppButton.tsx",
+        "src/components/sections/Contacto.tsx",
+        "src/pages/BrochurePage.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 8000,
+        "tokens_out": 800,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-11"
+      }
+    },
+    {
+      "id": "TASK-003",
+      "title": "Crear la sección Cartelería Digital con DisplayAds y CTA a la plataforma",
+      "user_stories": [
+        "US-001"
+      ],
+      "estimation_hours": 1.5,
+      "story_points": 5,
+      "depends_on": [],
+      "status": "done",
+      "files": [
+        "src/data/displayads.ts",
+        "src/components/sections/CarteleriaDigital.tsx",
+        "src/App.tsx"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 17000,
+        "tokens_out": 2100,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-11"
+      }
+    },
+    {
+      "id": "TASK-004",
+      "title": "Crear la sección FAQ con acordeón accesible y JSON-LD FAQPage",
+      "user_stories": [
+        "US-002"
+      ],
+      "estimation_hours": 1.5,
+      "story_points": 5,
+      "depends_on": [],
+      "status": "done",
+      "files": [
+        "src/data/faq.ts",
+        "src/components/sections/Faq.tsx",
+        "src/App.tsx",
+        "index.html"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 15000,
+        "tokens_out": 1900,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-11"
+      }
+    },
+    {
+      "id": "TASK-005",
+      "title": "Sumar los anchors Cartelería Digital y FAQ al menú desktop y mobile",
+      "user_stories": [
+        "US-001",
+        "US-002"
+      ],
+      "estimation_hours": 0.3,
+      "story_points": 1,
+      "depends_on": [
+        "TASK-003",
+        "TASK-004"
+      ],
+      "status": "done",
+      "files": [
+        "src/components/layout/Header.tsx",
+        "public/sitemap.xml"
+      ],
+      "usage": {
+        "provider_model": "claude/opus",
+        "effort": "high",
+        "agent": "implementor-front",
+        "tokens_in": 6000,
+        "tokens_out": 600,
+        "approx": true,
+        "source": "declared-estimate",
+        "recorded_at": "2026-09-11"
+      }
+    }
+  ]
+}

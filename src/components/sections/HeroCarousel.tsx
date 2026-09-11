@@ -103,12 +103,13 @@ export default function HeroCarousel() {
             <picture>
               <source
                 media="(min-width: 768px)"
-                srcSet={asset(slide.desktop)}
+                srcSet={`${asset(slide.desktop)} 1x, ${asset(slide.desktopRetina)} 2x`}
                 width={1920}
                 height={800}
               />
               <img
                 src={asset(slide.mobile)}
+                srcSet={`${asset(slide.mobile)} 1x, ${asset(slide.mobileRetina)} 2x`}
                 alt={slide.alt}
                 width={1080}
                 height={900}

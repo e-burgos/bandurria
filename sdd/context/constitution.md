@@ -81,7 +81,7 @@ Para el detalle técnico de cada subproyecto, ver su constitución específica:
 
 | Subproyecto | Stack base                                                                              | Última actualización |
 | ----------- | --------------------------------------------------------------------------------------- | -------------------- |
-| apps/{project}  | React 19 + TypeScript 6 + Vite 8 + Tailwind CSS 4 + React Router 7 + Framer Motion 12 | cycle-0 (inicial)    |
+| apps/{project}  | React 19 + TypeScript 6 + Vite 8 + Tailwind CSS 4 + React Router 7 + Framer Motion 12 | spec-002 · cycle-01  |
 
 ---
 
