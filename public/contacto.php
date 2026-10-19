@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 const DESTINATION_ADDRESS = 'contacto@bandurriadeco.com.ar';
 const SENDER_ADDRESS = 'contacto@bandurriadeco.com.ar';
-const ALLOWED_HOSTS = ['bandurriadeco.com.ar', 'www.bandurriadeco.com.ar', 'new.bandurriadeco.com.ar'];
+const ALLOWED_HOSTS = ['bandurriadeco.com.ar', 'www.bandurriadeco.com.ar'];
 const MAX_SUBMISSIONS_PER_HOUR = 5;
 
 function respond(int $status, array $body): never

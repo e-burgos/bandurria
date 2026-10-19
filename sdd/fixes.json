@@ -313,6 +313,39 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-010",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-010.md",
+      "type": "IMPROVEMENT",
+      "severity": "low",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "og-image.jpg y baja del subdominio de prueba new.",
+      "estimation_hours": 1,
+      "description": "Se crea public/og-image.jpg (1200x630, ~94 KB) que referencian og:image y twitter:image y no existía. Se retira el subdominio de prueba new.bandurriadeco.com.ar: se elimina el workflow deploy-cpanel.yml y new. sale de los hosts permitidos de contacto.php.",
+      "justification": "Pedido del dev: agregar el og-image y quitar new., que sólo era de prueba.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "public/og-image.jpg",
+        "public/contacto.php",
+        ".github/workflows/deploy-cpanel.yml"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 60000,
+        "tokens_out": 5000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
