@@ -180,6 +180,43 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-006",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-006.md",
+      "type": "BUGFIX",
+      "severity": "low",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Favicon: reemplazar el logo de Vite por el logo de Bandurria visible en cualquier tema",
+      "estimation_hours": 0.5,
+      "description": "public/favicon.svg era el rayo violeta de Vite y los navegadores lo preferían sobre los PNG. Los PNG eran el logo blanco sobre transparente de bandurriadeco.com.ar, invisible en pestañas claras. Se regeneran todos los iconos desde ese logo sobre fondo #0A0A0A, se agrega favicon.ico y se elimina el SVG.",
+      "justification": "Pedido del dev: reparar el favicon usando el del sitio actual bandurriadeco.com.ar.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "index.html",
+        "public/favicon.svg",
+        "public/favicon.ico",
+        "public/favicon-32x32.png",
+        "public/apple-touch-icon.png",
+        "public/android-chrome-192x192.png",
+        "public/android-chrome-512x512.png"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 40000,
+        "tokens_out": 3000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
