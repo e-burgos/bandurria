@@ -217,6 +217,38 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-007",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-007.md",
+      "type": "IMPROVEMENT",
+      "severity": "low",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Deploy automático por FTP al hosting cPanel (subdominio de prueba)",
+      "estimation_hours": 1,
+      "description": "Workflow deploy-cpanel.yml: build con base '/', bloqueo de indexación del entorno de prueba y subida por FTPS a la carpeta del subdominio. public/.htaccess agrega el fallback del ruteo SPA, compresión y caché. El job solo corre si la variable FTP_HOST del repo está definida.",
+      "justification": "Pedido del dev: publicar la web en un subdominio de prueba del hosting de bandurriadeco.com.ar (Net Services Argentina) con deploy automático.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        ".github/workflows/deploy-cpanel.yml",
+        "public/.htaccess"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 70000,
+        "tokens_out": 5000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
