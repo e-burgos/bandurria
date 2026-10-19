@@ -1,6 +1,7 @@
 import { type FormEvent, useState } from "react";
 import { RevealOnScroll } from "../ui/RevealOnScroll";
 import { WHATSAPP_DISPLAY, whatsappLink } from "../../data/contacto";
+import { asset } from "../../lib/asset";
 
 interface FormState {
   nombre: string;
@@ -141,6 +142,7 @@ export default function Contacto() {
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -151,11 +153,27 @@ export default function Contacto() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Simula envío — reemplazar con endpoint real
-    await new Promise((r) => setTimeout(r, 900));
-    setSending(false);
-    setSent(true);
-    setForm(INITIAL_FORM);
+    setFailed(false);
+    const honeypot = new FormData(e.currentTarget as HTMLFormElement).get(
+      "website",
+    );
+    try {
+      const response = await fetch(asset("contacto.php"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, website: honeypot }),
+      });
+      const result: { ok?: boolean } = await response.json();
+      if (!response.ok || !result.ok) {
+        throw new Error("contact_request_rejected");
+      }
+      setSent(true);
+      setForm(INITIAL_FORM);
+    } catch {
+      setFailed(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputClass = [
@@ -284,7 +302,15 @@ export default function Contacto() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute -left-[9999px] h-0 w-0 opacity-0"
+                  />
                   <div>
                     <label
                       htmlFor="nombre"
@@ -362,6 +388,21 @@ export default function Contacto() {
                       className={`${inputClass} resize-none`}
                     />
                   </div>
+
+                  {failed && (
+                    <p role="alert" className="text-sm text-red-500">
+                      No pudimos enviar tu mensaje. Probá de nuevo o escribinos por{" "}
+                      <a
+                        href={whatsappLink("Hola Bandurria, quiero hacer una consulta")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold underline"
+                      >
+                        WhatsApp
+                      </a>
+                      .
+                    </p>
+                  )}
 
                   <button
                     type="submit"

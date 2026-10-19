@@ -281,6 +281,38 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-009",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-009.md",
+      "type": "BUGFIX",
+      "severity": "medium",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Formulario de contacto: envío real por mail con PHP en el hosting",
+      "estimation_hours": 1.5,
+      "description": "El formulario simulaba el envío con un setTimeout y descartaba los mensajes. Ahora hace POST a public/contacto.php, que valida en el servidor, aplica honeypot, origen permitido y límite por IP, y envía el mail a contacto@bandurriadeco.com.ar con remitente del mismo dominio (SPF y DKIM válidos). El éxito se muestra sólo si el servidor confirma; si falla, ofrece WhatsApp.",
+      "justification": "Los mensajes del formulario se perdían en producción mientras el usuario veía un mensaje de éxito falso.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "public/contacto.php",
+        "src/components/sections/Contacto.tsx"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 120000,
+        "tokens_out": 9000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
