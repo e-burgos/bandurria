@@ -27,6 +27,7 @@ export const SERVICES: Service[] = [
       "Nos encargamos de la producción integral de tus exhibidores de plástico corrugado, para piso o mostrador, desde los 2 a 10 mm de espesor.",
     items: [],
     icon: LayoutPanelTop,
+    image: "/servicios/exhibidores.webp",
   },
   {
     id: "pop",
@@ -45,6 +46,7 @@ export const SERVICES: Service[] = [
       "Islas",
     ],
     icon: SquareStack,
+    image: "/servicios/pop.webp",
   },
   {
     id: "eventos",
@@ -57,6 +59,7 @@ export const SERVICES: Service[] = [
       "Cubos apilables",
     ],
     icon: Flag,
+    image: "/servicios/eventos.webp",
   },
   {
     id: "offset-digital",
@@ -76,6 +79,7 @@ export const SERVICES: Service[] = [
       "Sobres",
     ],
     icon: Printer,
+    image: "/servicios/offset-digital.webp",
   },
   {
     id: "rigidos",
@@ -92,6 +96,7 @@ export const SERVICES: Service[] = [
       "Madera",
     ],
     icon: ScrollText,
+    image: "/servicios/rigidos.webp",
   },
   {
     id: "gran-formato",
@@ -106,6 +111,7 @@ export const SERVICES: Service[] = [
       "¡Y mucho más!",
     ],
     icon: Maximize,
+    image: "/servicios/gran-formato.webp",
   },
   {
     id: "carteleria",
@@ -114,6 +120,7 @@ export const SERVICES: Service[] = [
       "Fabricación e instalación de marquesinas y tensado de lonas, con cobertura en todo el país.",
     items: [],
     icon: Megaphone,
+    image: "/servicios/carteleria.webp",
   },
   {
     id: "vidrieras",
@@ -122,5 +129,6 @@ export const SERVICES: Service[] = [
       "Impresión sobre todo tipo de vinilos —base blanca, microperforado y cristal— con colocación en punto de venta. Cobertura a nivel nacional.",
     items: [],
     icon: AppWindow,
+    image: "/servicios/vidrieras.webp",
   },
 ];

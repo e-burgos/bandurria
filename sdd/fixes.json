@@ -115,6 +115,38 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-004",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-004.md",
+      "type": "IMPROVEMENT",
+      "severity": "low",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Servicios: fotos optimizadas en las tarjetas en lugar de los iconos",
+      "estimation_hours": 0.5,
+      "description": "Las 8 tarjetas de servicios muestran la foto de FOTO SERVICIOS en vez del icono. Los PNG de ~2 MB (16 MB en total) se convierten a WebP de 800 px de ancho (376 KB en total) en public/servicios/. CardMedia ya soportaba Service.image; el icono queda como fallback.",
+      "justification": "Pedido del dev: reemplazar los iconos por las fotos de servicios, optimizadas para la web.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "src/data/services.ts",
+        "public/servicios/"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 60000,
+        "tokens_out": 4000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
