@@ -3,6 +3,15 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  RewriteRule ^(home|28-2)/?$ / [R=301,L]
+  RewriteRule ^nosotros/?$ /#nosotros [R=301,NE,L]
+  RewriteRule ^tecnologia/?$ /#tecnologia [R=301,NE,L]
+  RewriteRule ^servicios/?$ /#servicios [R=301,NE,L]
+  RewriteRule ^contacto/?$ /#contacto [R=301,NE,L]
+  RewriteRule ^tienda-deco/?$ /tienda/ [R=301,L]
+
+  RewriteCond %{REQUEST_URI} !^/tienda(/|$)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]

@@ -249,6 +249,38 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-008",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-008.md",
+      "type": "IMPROVEMENT",
+      "severity": "medium",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Corte a producción en el hosting: redirecciones del WordPress viejo, /tienda y verificación de Google",
+      "estimation_hours": 1.5,
+      "description": "public/.htaccess redirige 301 las URLs del WordPress anterior (/nosotros, /servicios, /tecnologia, /contacto, /home, /tienda-deco) al sitio nuevo, deja fuera del fallback SPA a /tienda (otro WordPress) y se suma el archivo de verificación de Google Search Console. El WordPress viejo se mueve a old.bandurriadeco.com.ar y el sitio nuevo se publica en el dominio principal.",
+      "justification": "Pedido del dev: pasar la web nueva a producción en bandurriadeco.com.ar conservando el sitio viejo en old. y la tienda en /tienda.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "public/.htaccess",
+        "public/googled9eec180d5e65b02.html"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 110000,
+        "tokens_out": 9000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
