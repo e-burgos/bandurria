@@ -114,7 +114,7 @@ $isValid = lengthBetween($name, 2, 100)
     && filter_var($email, FILTER_VALIDATE_EMAIL) !== false
     && lengthBetween($email, 5, 150)
     && lengthBetween($subject, 3, 150)
-    && lengthBetween($message, 10, 3000);
+    && lengthBetween($message, 3, 3000);
 
 if (!$isValid) {
     respond(422, ['ok' => false, 'error' => 'invalid_fields']);

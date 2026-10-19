@@ -10,6 +10,12 @@ interface FormState {
   mensaje: string;
 }
 
+const FAILURE_MESSAGES: Record<string, string> = {
+  invalid_fields: "Revisá los datos: todos los campos son obligatorios y el email tiene que ser válido.",
+  too_many_requests: "Enviaste varios mensajes seguidos. Probá de nuevo en un rato.",
+};
+const DEFAULT_FAILURE_MESSAGE = "No pudimos enviar tu mensaje. Probá de nuevo.";
+
 const INITIAL_FORM: FormState = {
   nombre: "",
   mail: "",
@@ -142,7 +148,7 @@ export default function Contacto() {
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [failure, setFailure] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -153,7 +159,7 @@ export default function Contacto() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
-    setFailed(false);
+    setFailure(null);
     const honeypot = new FormData(e.currentTarget as HTMLFormElement).get(
       "website",
     );
@@ -163,14 +169,17 @@ export default function Contacto() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, website: honeypot }),
       });
-      const result: { ok?: boolean } = await response.json();
+      const result: { ok?: boolean; error?: string } = await response.json();
       if (!response.ok || !result.ok) {
-        throw new Error("contact_request_rejected");
+        setFailure(
+          FAILURE_MESSAGES[result.error ?? ""] ?? DEFAULT_FAILURE_MESSAGE,
+        );
+        return;
       }
       setSent(true);
       setForm(INITIAL_FORM);
     } catch {
-      setFailed(true);
+      setFailure(DEFAULT_FAILURE_MESSAGE);
     } finally {
       setSending(false);
     }
@@ -389,9 +398,9 @@ export default function Contacto() {
                     />
                   </div>
 
-                  {failed && (
+                  {failure && (
                     <p role="alert" className="text-sm text-red-500">
-                      No pudimos enviar tu mensaje. Probá de nuevo o escribinos por{" "}
+                      {failure} También podés escribirnos por{" "}
                       <a
                         href={whatsappLink("Hola Bandurria, quiero hacer una consulta")}
                         target="_blank"
