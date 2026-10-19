@@ -34,3 +34,9 @@ WordPress viejo se mueve ahí con renombrados (mismo filesystem, instantáneos y
 ## Rollback
 
 Mover de vuelta el contenido de `old.bandurriadeco.com.ar/` a `public_html/`.
+
+## Lección del corte
+
+El `.htaccess` de la raíz del WordPress viejo traía el handler de PHP que genera cPanel
+(`ea-php82`); `/tienda` (otro WordPress) dependía de él. El `.htaccess` nuevo lo incluye, y
+`DirectoryIndex` incluye `index.php`: sin eso `/tienda/` respondía 302 a `0.0.0.0`.
