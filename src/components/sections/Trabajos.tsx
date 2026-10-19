@@ -6,10 +6,11 @@ import { Lightbox, type OriginOffset } from "../ui/Lightbox";
 import { asset } from "../../lib/asset";
 
 const EASE: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+const HALF = Math.floor(TRABAJOS.length / 2);
 const ROWS = [
   { items: TRABAJOS, speed: 42, reverse: false },
   {
-    items: [...TRABAJOS.slice(4), ...TRABAJOS.slice(0, 4)],
+    items: [...TRABAJOS.slice(HALF), ...TRABAJOS.slice(0, HALF)],
     speed: 34,
     reverse: true,
   },

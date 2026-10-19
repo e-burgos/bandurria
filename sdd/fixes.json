@@ -147,6 +147,39 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-005",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-005.md",
+      "type": "IMPROVEMENT",
+      "severity": "low",
+      "created_at": "2026-10-19",
+      "resolved_at": "2026-10-19",
+      "title": "Trabajos realizados: reemplazar los placeholders por las 19 fotos definitivas",
+      "estimation_hours": 0.5,
+      "description": "Las 8 fotos provisorias de Trabajos se reemplazan por las 19 de FOTOS TRABAJOS, convertidas a WebP (miniatura 640 px para la cinta y 1280 px para el visor). La segunda fila del marquee rota half = floor(n/2) en vez de 4 fijo.",
+      "justification": "Pedido del dev: usar las fotos definitivas de la carpeta FOTOS TRABAJOS, optimizadas para la web.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "src/data/trabajos.ts",
+        "src/components/sections/Trabajos.tsx",
+        "public/trabajos/"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "medium",
+        "tokens_in": 45000,
+        "tokens_out": 4000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }
