@@ -1085,7 +1085,9 @@ acción del dev.
   reporta estado, `-- --disable` / `-- --enable` apagan y prenden.
 - **Hooks**: `.claude/settings.json` (`PreToolUse` sobre `Bash`) y `.gemini/settings.json`
   (`BeforeTool` sobre `run_shell_command`) — versionados, así que el equipo los recibe con un
-  `git pull`. Copilot y Antigravity todavía no tienen hook y funcionan igual sin él.
+  `git pull`. Copilot y Antigravity todavía no tienen hook y funcionan igual sin él. El kit
+  instala **solo** este hook: cualquier otro `PreToolUse` (por ejemplo `block-no-verify` de un
+  plugin de terceros) viene de la configuración o los plugins del usuario, no de `sdd/`.
 - **Best effort**: si el binario falta o el hook falla, el comando pasa sin comprimir; nunca
   bloquea. El binario se instala fuera del repo (`~/.local/bin`) y su historial es **por
   máquina**, así que el ahorro es el de quien corre el visor.
@@ -1206,6 +1208,22 @@ ls sdd/context/*/*/updates/*.md 2>/dev/null | wc -l
 ---
 
 ## Changelog
+
+### v5.6 (2026-10-07) — sdd-mod: el SDD dentro de Claude Code (opcional)
+
+- ✅ **Mod de Claude Code en el kit** (kit v0.16.0): `sdd/skills/sdd-mod/`. Claude Code lo carga
+  solo desde `.claude/skills/` cuando la carpeta del proyecto es de confianza — sin marketplace
+  ni instalación aparte. Viene **apagado**: `pnpm sdd:mod -- --enable` lo prende.
+- ✅ **Franja sobre el prompt** con el ciclo en curso (spec · ciclo · flow · tareas hechas) y
+  **`/sdd`** con el detalle de tareas y fixes abiertos.
+- ✅ **SPEC GATE aplicado a las ediciones**: sin un ciclo `in-progress` ni un fix abierto,
+  `Edit`/`Write`/`NotebookEdit` sobre código se rechazan (`gate: "block"`, default) o solo avisan
+  (`gate: "warn"`). `sdd/`, las carpetas de los arneses y el markdown raíz quedan libres; si el mod
+  no puede leer `sdd/`, deja pasar (la red sigue siendo `sdd:validate`). No cubre comandos de shell.
+- ✅ **Interruptor en `sdd/tools.json → claude_mod`** (schema estricto, protegido del `update
+  sdd`), releído en cada turno. Nueva entrada en el steward: Playbook 7.
+- ✅ **Los demás arneses no cambian**: `setup-agents` enlaza el mod solo en `.claude/`; Copilot,
+  Antigravity y Gemini CLI siguen las mismas reglas desde sus archivos.
 
 ### v5.5 (2026-09-06) — rtk activo por defecto, Costos en 4 pestañas con gráficos
 

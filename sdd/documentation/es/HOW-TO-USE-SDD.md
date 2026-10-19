@@ -127,6 +127,27 @@ antes de que el agente la lea: 60–90% menos texto, sin tocar la lectura de arc
 está, el comando corre igual, sin comprimir. El ahorro se ve con `rtk gain --project` o en
 `pnpm sdd:docs` → Costos → pestaña **RTK** (números por máquina y estimados).
 
+### sdd-mod — el SDD dentro de Claude Code (opcional, apagado por defecto)
+
+Solo para quien usa Claude Code. `sdd/skills/sdd-mod/` es un mod que Claude Code carga solo
+desde `.claude/skills/` (cuando la carpeta del proyecto es de confianza). Prendido, muestra una
+franja sobre el prompt con el ciclo en curso (spec · ciclo · flow · tareas hechas), suma `/sdd`
+con el detalle de tareas y fixes abiertos, y aplica el SPEC GATE a las ediciones de código: sin
+un ciclo `in-progress` ni un fix abierto, `Edit`/`Write` sobre código se rechazan (o solo
+avisan, con `--gate=warn`). `sdd/`, las carpetas de los arneses y el markdown de la raíz quedan
+libres.
+
+```bash
+pnpm sdd:mod -- --status       # prendido/apagado, modo del gate, link en .claude/skills
+pnpm sdd:mod -- --enable       # prenderlo (se relee en cada turno, sin reiniciar)
+pnpm sdd:mod -- --gate=warn    # avisar en vez de bloquear (block es el default)
+pnpm sdd:mod -- --disable      # apagarlo
+```
+
+Copilot, Gemini y el resto de los agentes no lo ven y no cambian: siguen las mismas reglas desde
+`AGENTS.md`/`GEMINI.md`/`copilot-instructions.md`, y `pnpm sdd:validate` sigue siendo la red de
+seguridad común en CI. El gate del mod no cubre comandos de shell.
+
 ---
 
 ## 3. Flujo normal — Funcionalidad nueva
@@ -237,7 +258,9 @@ El Arquitecto lee `functional.md`, `brief.yaml`, `sdd/schema.json` y `sdd/api.js
 **El dev revisa ambos documentos.** Si hay inconsistencias entre planner y architect (ej. una task menciona un endpoint que el arquitecto no definió), se le indica a cada agente que lo corrija.
 
 > Documentos de apoyo (diagramas, ejemplos de endpoints, exploración de código) que el Arquitecto genere:
-> → guardar **siempre** en `cycle-01/artifacts/` y referenciar en `cycle.json["artifacts"]`.
+> → guardar **siempre** en `cycle-01/artifacts/` y referenciar en `cycle.json["artifacts"]` con la
+> ruta relativa al ciclo (`artifacts/api-samples/`); se aceptan directorios, y también la ruta desde
+> la raíz del repo.
 
 ---
 
@@ -645,9 +668,10 @@ Y si el punto 4 es NO, hay un error: los base solo los toca la consolidación (v
   (`pnpm sdd:rtk -- --disable` es decisión del dev).
 - **Invariantes del workspace** (los garantiza la skill `init-nx-workspace`, y romperlos falla en
   silencio): pnpm es el único package manager; los proyectos viven en `apps/`, `libs/` y `tools/`
-  —nunca en `packages/`—; `customConditions` de `tsconfig.base.json` es **idéntico** al `name` del
-  `package.json` raíz; y `.nxignore` contiene `sdd/templates` para que los blueprints no entren al
-  project graph.
+  —nunca en `packages/`—; si el repo usa el TS solution setup, `customConditions` de
+  `tsconfig.base.json` es **idéntico** al `name` del `package.json` raíz (el template del kit usa
+  `paths` y no lo declara; `sdd:validate` avisa si divergen); y `.nxignore` contiene
+  `sdd/templates` para que los blueprints no entren al project graph.
 - **El nombre y la descripción del proyecto viven SOLO en `sdd/global.json`** (`project` /
   `description`). Ningún otro archivo de `sdd/` los hardcodea — eso es lo que mantiene `sdd/`
   portable, y `pnpm sdd:validate` falla si el valor se filtra a los documentos del kit.

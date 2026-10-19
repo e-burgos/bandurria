@@ -1084,7 +1084,9 @@ reading is untouched. It ships **on by default since kit v0.12.0**, with zero de
   reports the state, `-- --disable` / `-- --enable` turn it off and on.
 - **Hooks**: `.claude/settings.json` (`PreToolUse` on `Bash`) and `.gemini/settings.json`
   (`BeforeTool` on `run_shell_command`) — versioned files, so the whole team gets them with a
-  `git pull`. Copilot and Antigravity have no hook yet and work exactly the same without it.
+  `git pull`. Copilot and Antigravity have no hook yet and work exactly the same without it. The
+  kit installs **only** this hook: any other `PreToolUse` (for instance `block-no-verify` from a
+  third-party plugin) comes from the user's own settings or plugins, not from `sdd/`.
 - **Best effort**: if the binary is missing or the hook fails, the command runs uncompressed; it
   never blocks. The binary is installed outside the repo (`~/.local/bin`) and its history is
   **per machine**, so the savings shown are those of whoever runs the viewer.
@@ -1208,7 +1210,7 @@ ls sdd/context/*/*/updates/*.md 2>/dev/null | wc -l
 
 > The version history below is kept in Spanish in
 > [documentation/es/README.md](../es/README.md#changelog) — it is the historical record of how
-> this system evolved (rtk on by default plus the 4-tab Costs dashboard with charts in v5.5,
+> this system evolved (the optional Claude Code mod `sdd-mod` — cycle band, `/sdd` and the SPEC GATE on edits — in v5.6, rtk on by default plus the 4-tab Costs dashboard with charts in v5.5,
 > mandatory telemetry with declared estimates — `approx`/`source` — and
 > `skipped` counted as resolved in v5.4, Gemini/Antigravity as a third harness provider with
 > provider-namespaced cost telemetry and a bilingual viewer in v5.3, skills back to uppercase `SKILL.md` — the Agent

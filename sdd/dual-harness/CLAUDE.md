@@ -36,8 +36,11 @@ Invariantes que la skill garantiza y que **ningún cambio puede romper**:
   `npm install` ni `yarn` en este repo — generan un lockfile rival y Nx infiere el PM del lockfile.
 - **Los proyectos viven en `apps/`, `libs/` y `tools/`** — nunca en `packages/`. Los globs de
   `pnpm-workspace.yaml` y todo el sistema SDD asumen eso.
-- **`customConditions` de `tsconfig.base.json` === `name` del `package.json` raíz.** Nx lo deriva
-  literal de ahí; si divergen, TypeScript resuelve a `dist` en vez de a `src`.
+- **Si el repo usa el TS solution setup (`customConditions` en `tsconfig.base.json`), ese valor
+  === `name` del `package.json` raíz.** Nx lo deriva literal de ahí; si divergen, TypeScript
+  resuelve a `dist` en vez de a `src`. El template del kit (`sdd/templates/nx-workspace/`) usa el
+  wiring legacy `paths` y no declara `customConditions`: ahí no aplica. `pnpm sdd:validate` avisa
+  si divergen.
 - **`.nxignore` contiene `sdd/templates`** — son blueprints, no proyectos Nx.
 - **Crear apps/libs es otra skill:** `scaffold-nx`, y siempre dentro de un ciclo SDD.
 
@@ -77,6 +80,19 @@ transparente: pedís `git status` y se ejecuta `rtk git status`.
 - `rtk gain --project` imprime el ahorro acumulado (estimación, no facturación). Es best
   effort y por máquina: sin binario o con hook roto el comando pasa **sin comprimir** y nunca
   se bloquea.
+
+## 🧩 sdd-mod — el SDD dentro de Claude Code (OPCIONAL, apagado por defecto)
+
+`sdd/skills/sdd-mod/` es un mod de Claude Code que se carga solo desde `.claude/skills/`. Con
+`claude_mod.enabled: true` en `sdd/tools.json` muestra el ciclo en curso sobre el prompt, suma
+`/sdd` y aplica el SPEC GATE a `Edit`/`Write`/`NotebookEdit` sobre código.
+
+- **Si una edición vuelve rechazada con `SPEC GATE: …`**, no la reintentes ni la rodees con
+  comandos de shell: no hay ciclo `in-progress` ni fix abierto. Seguí el camino que indica el
+  mensaje (abrir el ciclo vía `sdd-orchestrator`, o el FIX GATE).
+- **Nunca lo prendas, apagues ni cambies su modo por tu cuenta**: es decisión del dev
+  (`pnpm sdd:mod -- --status | --enable | --disable | --gate=warn|block`; el sdd-steward lo
+  opera a pedido).
 
 ## ⚙️ Selección de modelo y esfuerzo (OBLIGATORIO — optimización de tokens/contexto)
 

@@ -128,6 +128,26 @@ it with a `git pull`. The switch lives in `sdd/tools.json` and is operated with
 just uncompressed. Savings show up in `rtk gain --project` or in `pnpm sdd:docs` → Costs → **RTK**
 tab (per-machine, estimated numbers).
 
+### sdd-mod — SDD inside Claude Code (optional, off by default)
+
+Claude Code only. `sdd/skills/sdd-mod/` is a mod Claude Code loads on its own from
+`.claude/skills/` (once the project folder is trusted). When on, it shows a band above the
+prompt with the cycle in progress (spec · cycle · flow · tasks done), adds `/sdd` with the task
+and open-fix detail, and applies the SPEC GATE to code edits: with no `in-progress` cycle and no
+open fix, `Edit`/`Write` on code are rejected (or only warned about, with `--gate=warn`). `sdd/`,
+the harness folders and root markdown stay free.
+
+```bash
+pnpm sdd:mod -- --status       # on/off, gate mode, link in .claude/skills
+pnpm sdd:mod -- --enable       # turn it on (re-read every turn, no restart)
+pnpm sdd:mod -- --gate=warn    # warn instead of blocking (block is the default)
+pnpm sdd:mod -- --disable      # turn it off
+```
+
+Copilot, Gemini and the other agents do not see it and do not change: they follow the same
+rules from `AGENTS.md`/`GEMINI.md`/`copilot-instructions.md`, and `pnpm sdd:validate` stays the
+shared safety net in CI. The mod's gate does not cover shell commands.
+
 ---
 
 ## 3. Normal flow — New functionality
@@ -243,7 +263,9 @@ The Architect reads `functional.md`, `brief.yaml`, `sdd/schema.json` and `sdd/ap
 (e.g. a task mentions an endpoint the architect did not define), tell each agent to fix it.
 
 > Supporting documents (diagrams, endpoint examples, code exploration) produced by the Architect:
-> → **always** store them in `cycle-01/artifacts/` and reference them in `cycle.json["artifacts"]`.
+> → **always** store them in `cycle-01/artifacts/` and reference them in `cycle.json["artifacts"]`
+> with the path relative to the cycle (`artifacts/api-samples/`); directories are accepted, and so
+> is a path from the repo root.
 
 ---
 
@@ -650,9 +672,10 @@ And if point 4 is NO, something is wrong: only consolidation touches the bases (
   (`pnpm sdd:rtk -- --disable` is the developer's call).
 - **Workspace invariants** (guaranteed by the `init-nx-workspace` skill; breaking them fails
   silently): pnpm is the only package manager; projects live in `apps/`, `libs/` and `tools/`
-  — never in `packages/` —; `customConditions` in `tsconfig.base.json` is **identical** to the
-  root `package.json` `name`; and `.nxignore` contains `sdd/templates` so the blueprints stay
-  out of the project graph.
+  — never in `packages/` —; if the repo uses the TS solution setup, `customConditions` in
+  `tsconfig.base.json` is **identical** to the root `package.json` `name` (the kit's template uses
+  `paths` and does not declare it; `sdd:validate` warns when they differ); and `.nxignore`
+  contains `sdd/templates` so the blueprints stay out of the project graph.
 - **The project name and description live ONLY in `sdd/global.json`** (`project` /
   `description`). No other file in `sdd/` hardcodes them — that is what keeps `sdd/` portable,
   and `pnpm sdd:validate` fails if the value leaks into the kit's documents.
