@@ -410,6 +410,39 @@
         "approx": true,
         "source": "declared-estimate"
       }
+    },
+    {
+      "id": "FIX-e-burgos-013",
+      "author": "e-burgos",
+      "spec_id": "spec-e-burgos-001-web-2026-redesign",
+      "fix_document": "sdd/specs/spec-e-burgos-001-web-2026-redesign/fixes/fix-e-burgos-001-013.md",
+      "type": "IMPROVEMENT",
+      "severity": "low",
+      "created_at": "2026-10-26",
+      "resolved_at": "2026-10-26",
+      "title": "Banners de descarga (listado de precios e instructivos) antes de Contacto",
+      "estimation_hours": 0.5,
+      "description": "Nueva sección Descargas entre FAQ y Contacto con dos banners: listado de precios e instructivos de armado de portabanner y back de prensa. Ambos botones abren la carpeta de Google Drive compartida.",
+      "justification": "Pedido del dev: poner a disposición del cliente precios e instructivos antes del contacto.",
+      "related_modules": [
+        "web-2026-redesign"
+      ],
+      "affected_files": [
+        "src/components/sections/Descargas.tsx",
+        "src/data/descargas.ts",
+        "src/App.tsx"
+      ],
+      "test_reference": null,
+      "status": "implemented",
+      "cycle": null,
+      "usage": {
+        "provider_model": "claude/sonnet",
+        "effort": "low",
+        "tokens_in": 40000,
+        "tokens_out": 4000,
+        "approx": true,
+        "source": "declared-estimate"
+      }
     }
   ]
 }

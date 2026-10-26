@@ -12,6 +12,7 @@ import Clientes from "./components/sections/Clientes";
 import Trabajos from "./components/sections/Trabajos";
 import Sectores from "./components/sections/Sectores";
 import Faq from "./components/sections/Faq";
+import Descargas from "./components/sections/Descargas";
 import Contacto from "./components/sections/Contacto";
 import BrochurePage from "./pages/BrochurePage";
 
@@ -31,6 +32,7 @@ function LandingPage() {
         <Trabajos />
         <Sectores />
         <Faq />
+        <Descargas />
         <Contacto />
       </main>
       <WhatsAppButton />
